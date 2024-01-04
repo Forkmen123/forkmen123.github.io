@@ -1,0 +1,105 @@
+/* custom fonts */
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Yeseva One', serif; */
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #d7cdbc;
+    color: #341830;
+}
+
+.drop-shadow {
+    text-shadow: 0 2px 2px rgba(44, 0, 0, 0.151);
+}
+
+
+
+
+
+
+
+.navbar {
+    background-color: #341830;
+}
+
+.my-navbar-brand {
+    color: #edcfac;
+    font-family: 'Yeseva One', serif; 
+}
+
+.my-navbar-brand:hover {
+    color: #edcfac;
+ 
+}
+
+.navbar-toggler  {
+    color: #c4ae94;
+}
+
+.navbar-toggler-icon {
+    color: #c4ae94;
+}
+
+
+
+
+
+
+
+
+.fa-chevron-right {
+    color: #aa736e;
+    text-shadow: 0 0 1px #aa736e;
+    margin-top: 15.625rem;
+}
+
+.fa-chevron-left {
+    color: #aa736e;
+    text-shadow: 0 0 1px #aa736e;
+    margin-top: 15.625rem;
+}
+
+
+.fa-chevron-right:hover {
+    color: #c99792;
+    transition-duration: 250ms;
+}
+
+.fa-chevron-left:hover {
+    color: #c99792;
+    transition-duration: 250ms;
+}
+
+
+
+
+
+.my-h1 {
+    font-family: 'Yeseva One', serif; 
+    color: #341830;
+    text-shadow: 0 0 1px #341830;
+}
+
+
+
+
+
+
+.btn-primary {
+    background-color: #702b37;
+    color: #d7cdbc;
+    font-family: 'Yeseva One', serif; 
+    border: 0
+}
+
+
+.btn-primary:hover {
+    background-color: #7d313e !important;
+    color: #f2ece0;
+}
+
+.btn-primary:active {
+    background-color: #7d313e !important;
+    color: #f2ece0 !important;
+}
