@@ -18,6 +18,12 @@
 
 
 
+// infinite scroll
+
+
+
+// data enlargeable
+
 $('img[data-enlargeable]').addClass('img-enlargeable').click(function() {
     var src = $(this).attr('src');
     var modal;
@@ -49,4 +55,17 @@ $('img[data-enlargeable]').addClass('img-enlargeable').click(function() {
 
 
 
+// masonry
 
+var masonryGrid = new Masonry('#masonry-grid', {
+  itemSelector: '.col-md-6', // Adjust this selector based on your column classes
+  columnWidth: '.col-md-6',
+  percentPosition: true
+});
+
+
+var masonryGrid = new Masonry('#masonry-grid', {
+  itemSelector: '.col-12', // Adjust this selector based on your column classes
+  columnWidth: '.col-12',
+  percentPosition: true
+});

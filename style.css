@@ -115,7 +115,7 @@ html.is-leaving .transition-fade {
     transition-duration: 250ms;
 }
 
-.dropdown-item:visited {
+.dropdown-item:visited, .dropdown-item:active {
     background-color: #e2d6c8 !important;
     color: #341830;
     transition-duration: 250ms;
@@ -233,3 +233,17 @@ html.is-leaving .transition-fade {
 
 
 
+
+
+/* my projects */
+
+.my-projects:hover {
+    opacity: 90%;
+    transition-duration: 400ms;
+}
+
+
+.custom-img {
+    width: 100%;
+    height: auto;
+}

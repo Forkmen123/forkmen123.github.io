@@ -23,7 +23,9 @@
     <link rel="icon" href="images/favicon.jpg">
 
 
-
+<!-- masonry -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
 
 
 <!-- google fonts -->
@@ -79,7 +81,7 @@
                         </a>
 
                         <ul class="dropdown-menu my-dropdown-menu" >
-                            <li><a class="dropdown-item" href="projets-peinture.html">Peintures</a></li>
+                            <li><a class="dropdown-item" href="#">Peintures</a></li>
                             <li><a class="dropdown-item" href="#">Dessins</a></li>
                             <li><hr class="dropdown-divider d-none d-lg-block"></li>
                             <li><a class="dropdown-item" href="#">Autre</a></li>
@@ -113,28 +115,44 @@
     
 
 
-    <!-- left chevron -->
-
-    <div class="row my-5 transition-fade" id="swup">
-        <div class="col-1 d-lg-flex d-none justify-content-lg-center justify-content-end p-0 m-n3">
-            <a href="#"><i class="fa-solid fa-chevron-left fs-2"></i></a>
-        </div>
 
 
-
-
-    <!-- project picture -->
-
-        <div class="d-flex col-lg-5 col-12 w-10 p-lg-2 p-5 p-lg-0 border-0 justify-content-center ms-n2">
-            <img class="img-fluid rounded shadow" data-enlargeable style="cursor: zoom-in" src="images/peintures/projet-1.jpg" alt="">
-            <!-- <i class="fa-solid fa-expand  d-flex justify-content-end align-self-baseline" style="color:#34183077; font-size:28px;"></i> -->
-        </div>
+    <!-- project pictures -->
 
        
+    <div class="row g-4 my-4" id="masonry-grid">
+
+        <div class="col-md-6 col-12"><a href="projet-1.html"><img class="custom-img my-projects rounded shadow"  src="images/peintures/projet-1.jpg" alt=""></a></div>
+
+        <div class="col-md-6 col-12"><a href="projet-2.html"><img class="custom-img my-projects rounded shadow"  src="images/peintures/projet-2.jpg" alt=""></a></div>
+
+        <div class="col-md-6 col-12"><a href="projet-3-1.html"><img class="custom-img my-projects rounded shadow"  src="images/peintures/projet-3-1.jpg" alt=""></a></div>
+
+        <div class="col-md-6 col-12"><a href="projet-3-2.html"><img class="custom-img my-projects rounded shadow"  src="images/peintures/projet-3-2.jpg" alt=""></a></div>
+
+        <div class="col-md-6 col-12"><a href="projet-3-3.html"><img class="custom-img my-projects rounded shadow"  src="images/peintures/projet-3-3.jpg" alt=""></a></div>
+
+        <div class="col-md-6 col-12"><a href="projet-4.html"><img class="custom-img my-projects rounded shadow"  src="images/peintures/projet-4.jpg" alt=""></a></div>
+
+        <div class="col-md-6 col-12"><a href="projet-5.html"><img class="custom-img my-projects rounded shadow"  src="images/peintures/projet-5.jpg" alt=""></a></div>
+
+        <div class="col-md-6 col-12"><a href="projet-6.html"><img class="custom-img my-projects rounded shadow"  src="images/peintures/projet-6.jpg" alt=""></a></div>
+
+        <div class="col-md-6 col-12"><a href="projet-7.html"><img class="custom-img my-projects rounded shadow"  src="images/peintures/projet-7.jpg" alt=""></a></div>
+
+
+
+        
+    </div>
+           
+        
+        
+          
+    
 
     <!-- pagination -->
 
-        <nav aria-label="Navigation" class="mb-5 mt-n3 d-block d-lg-none">
+        <!-- <nav aria-label="Navigation" class="mt-4">
             <ul class="pagination justify-content-center">
                 
                 <li class="page-item">
@@ -154,43 +172,14 @@
                 </li>
            
             </ul>
-        </nav>
+        </nav> -->
 
 
 
 
-    <!-- information -->
-
-
-        <div class="col-lg p-lg-0 ps-lg-2">
-
-            <div class="display-5">
-                <div class="my-h1 mb-4 mt-lg-5 ms-3">Nom du projet</div>
-            </div>
-
-            <p class="ms-5 pe-2 pe-lg-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure quam optio magni dolores maxime officia quo ipsam tenetur doloremque voluptatum.</p>
-
-            <p class="text-end fst-italic mb-0 mt-5 me-3 me-sm-0">Lorem Ipsum</p>
-            <p class="text-end fst-italic mb-5 me-3 me-sm-0">12"&#215;8"</p>
-
-
-            <button type="button" class="btn btn-lg btn-primary ms-5 shadow">Me Contacter</button>
-            
-
-        </div>
-        
-
-
-    <!-- right chevron -->
-
-        <div class="col-1 d-lg-flex d-none justify-content-lg-center justify-content-start p-0">
-            <a href="#"><i class="fa-solid fa-chevron-right fs-2"></i></a>
-        </div>
-    
 
 
 
-    
    
     
 
@@ -202,7 +191,7 @@
 
     
     
-    </div>
+  
 
 
 
@@ -212,7 +201,7 @@
 
 
 
-    </div>
+</div>
 
 
     <!-- jquery js -->
