@@ -15,9 +15,52 @@ body {
 
 
 
+.my-h1 {
+    font-family: 'Yeseva One', serif; 
+    color: #341830;
+    text-shadow: 0 0 1px #341830;
+}
 
 
 
+
+
+/* transitions */
+
+.transition-fade {
+    opacity: 1;
+    transition: 250ms;
+}
+
+html.is-animating .transition-fade {
+    opacity: 1;
+}
+
+html.is-leaving .transition-fade {
+    opacity: 0;
+}
+
+
+/* .transition-swipe {
+    transition: 500ms;
+    transform: translateX(0);
+    transform-origin: left;
+}
+
+html.is-animating .transition-fade {
+    transform: translateX(100%);
+}
+
+html.is-leaving .transition-fade {
+    transform: translateX(0);
+} */
+
+
+
+
+
+
+/* navbar */
 
 .navbar {
     background-color: #341830;
@@ -29,9 +72,21 @@ body {
 }
 
 .my-navbar-brand:hover {
-    color: #edcfac;
+    color: #e9d6c3;
+    transition-duration: 250ms;
+}
+
+
+
+.my-navbar-brand:visited {
+    color: #edcfac !important;
  
 }
+.my-navbar-brand:active {
+    color: #e9d6c3 !important;
+}
+
+
 
 .navbar-toggler  {
     color: #c4ae94;
@@ -45,8 +100,51 @@ body {
 
 
 
+/* dropdown menu */
 
 
+.my-dropdown-menu {
+    background-color: #dbccb3;
+    color: #341830 !important;
+    transition: 2s;
+}
+
+.dropdown-item:hover {
+    background-color: #e2d6c8 !important;
+    color: #341830;
+    transition-duration: 250ms;
+}
+
+.dropdown-item:visited {
+    background-color: #e2d6c8 !important;
+    color: #341830;
+    transition-duration: 250ms;
+}
+
+@media (max-width: 992px) {
+
+    .my-dropdown-menu {
+        background-color: #341830;
+        color: #c4ae94;
+        border: 0;
+    }
+
+    .dropdown-item {
+        color: #c4ae94 !important;
+        border: 0;
+        margin-top: -3px;
+    }
+
+}
+
+
+
+
+
+
+
+
+/* navigation chevrons */
 
 .fa-chevron-right {
     color: #aa736e;
@@ -73,18 +171,28 @@ body {
 
 
 
+@media (max-width: 438px) {
 
+    .fa-chevron-right {
+        margin-top: 10.625rem;
+    }
+    
+    .fa-chevron-left {
+        margin-top: 10.625rem;
+    }
 
-.my-h1 {
-    font-family: 'Yeseva One', serif; 
-    color: #341830;
-    text-shadow: 0 0 1px #341830;
 }
 
 
 
 
 
+
+
+
+
+
+/* button */
 
 .btn-primary {
     background-color: #702b37;
@@ -103,3 +211,25 @@ body {
     background-color: #7d313e !important;
     color: #f2ece0 !important;
 }
+
+
+
+
+
+/* pagination */
+
+.my-pagination {
+    background-color: #56401a1f;
+    color: #341830;
+    font-family: 'Open Sans', sans-serif;
+    border: 0;
+}
+
+.my-pagination:hover, .my-pagination:visited, .my-pagination:active, .my-pagination:focus  {
+    background-color: #332a194e !important;
+    color: #341830;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+

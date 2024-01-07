@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    
+    
+    
+<!-- swup -->
+    <script src="https://unpkg.com/swup@4"></script>
+    <script>
+        const swup = new Swup();
+    </script>
 
 
-
-    <!-- Changer le texte plus tard -->
+<!-- Changer le texte plus tard -->
     <title>Type du Projet - Nom du projet</title>
 
-    <!-- Changer le texte plus tard -->
+<!-- Changer le texte plus tard -->
     <meta name="description" content="####">
 
     <link rel="icon" href="images/favicon.jpg">
@@ -18,45 +26,42 @@
 
 
 
-    <!-- google fonts -->
+<!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Yeseva+One&display=swap" rel="stylesheet">
 
-    <!-- fontawesome -->
+<!-- fontawesome -->
     <script src="https://kit.fontawesome.com/952594155e.js" crossorigin="anonymous"></script>
     
-    <!-- bootstrap css -->
+<!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- google materials css -->
+<!-- google materials css -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-    <!-- my css -->
+<!-- my css -->
     <link rel="stylesheet" href="style.css">
 
 
 
 </head>
 
-<body>
-        
-
-
+<body class="m-0 p-0">
 <div class="container px-0">
 
 
 
 
 
-    <!-- navbar -->
+<!-- navbar -->
     
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg m-0">
         <div class="container-fluid ps-4">
             <a class="navbar-brand" href="index.html">
                 <div class="my-navbar-brand fs-3">Tommy Roy</div>
             </a>
         
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 
                 <span class="navbar-toggler-icon border-0"> 
                     <i class="fas fa-bars" style="color:#edcfac; font-size:28px;"></i>
@@ -73,10 +78,10 @@
                         Projets
                         </a>
 
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu my-dropdown-menu" >
                             <li><a class="dropdown-item" href="#">Peintures</a></li>
                             <li><a class="dropdown-item" href="#">Dessins</a></li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li><hr class="dropdown-divider d-none d-lg-block"></li>
                             <li><a class="dropdown-item" href="#">Autre</a></li>
                         </ul>
                     </li>
@@ -92,64 +97,104 @@
 
     
     
+
+
+
+
+
+
     
-    <!-- content -->
-    
-    <!-- carousel-control-prev -->
+<!-- content -->
     
 
-    <div class="row my-5" >
-        <div class="col-1 d-flex justify-content-center">
-            <a href="#"><i class="fa-solid fa-chevron-left fs-3"></i></a>
+
+    <!-- left chevron -->
+
+    <div class="row my-5 transition-fade" id="swup">
+        <div class="col-1 d-lg-flex d-none justify-content-lg-center justify-content-end p-0 m-n3">
+            <a href="#"><i class="fa-solid fa-chevron-left fs-2"></i></a>
         </div>
 
 
 
 
-        <div class="col-lg-5 col-10 w-10">
-            <img class="img-fluid rounded shadow" data-enlargeable style="cursor: zoom-in" src="images/peintures/projet-5.jpg" alt="">
-            <!-- <div class="card-img-overlay">Testeklrtsjet</div> -->
+    <!-- project picture -->
+
+        <div class="d-flex col-lg-5 col-12 w-10 p-lg-2 p-5 p-lg-0 border-0 justify-content-center ms-n2">
+            <img class="img-fluid rounded shadow" data-enlargeable style="cursor: zoom-in" src="images/peintures/projet-1.jpg" alt="">
+            <!-- <i class="fa-solid fa-expand  d-flex justify-content-end align-self-baseline" style="color:#34183077; font-size:28px;"></i> -->
         </div>
 
-        <!-- <div class="card text-bg-dark">
-            <img src="..." class="card-img" alt="...">
-            <div class="card-img-overlay">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small>Last updated 3 mins ago</small></p>
-            </div>
-          </div> -->
-        
+       
+
+    <!-- pagination -->
+
+        <nav aria-label="Navigation" class="mb-5 mt-n3 d-block d-lg-none">
+            <ul class="pagination justify-content-center">
+                
+                <li class="page-item">
+                    <a class="page-link my-pagination" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                
+                <li class="page-item"><a class="page-link my-pagination" href="#">1</a></li>
+                <li class="page-item"><a class="page-link my-pagination" href="#">2</a></li>
+                <li class="page-item"><a class="page-link my-pagination" href="#">3</a></li>
+                
+                <li class="page-item">
+                    <a class="page-link my-pagination" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+           
+            </ul>
+        </nav>
 
 
-        <div class="col-lg p-5 p-lg-0 ps-lg-2">
+
+
+    <!-- information -->
+
+
+        <div class="col-lg p-lg-0 ps-lg-2">
+
             <div class="display-5">
-                <div class="my-h1 mb-4 mt-5">Nom du projet</div>
+                <div class="my-h1 mb-4 mt-lg-5 ms-3">Nom du projet</div>
             </div>
-            <p class="ms-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure quam optio magni dolores maxime officia quo ipsam tenetur doloremque voluptatum.</p>
 
+            <p class="ms-5 pe-2 pe-lg-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure quam optio magni dolores maxime officia quo ipsam tenetur doloremque voluptatum.</p>
 
-            <p class="text-end fst-italic mb-0 mt-5">Lorem Ipsum</p>
-            <p class="text-end fst-italic mb-5">12"&#215;8"</p>
+            <p class="text-end fst-italic mb-0 mt-5 me-3 me-sm-0">Lorem Ipsum</p>
+            <p class="text-end fst-italic mb-5 me-3 me-sm-0">12"&#215;8"</p>
 
 
             <button type="button" class="btn btn-lg btn-primary ms-5 shadow">Me Contacter</button>
             
 
-
         </div>
         
 
 
+    <!-- right chevron -->
 
-
-        <div class="col-1 d-flex justify-content-center">
-            <a href="#"><i class="fa-solid fa-chevron-right fs-3"></i></a>
+        <div class="col-1 d-lg-flex d-none justify-content-lg-center justify-content-start p-0">
+            <a href="#"><i class="fa-solid fa-chevron-right fs-2"></i></a>
         </div>
     
+
+
+
     
+   
     
-    
+
+
+
+
+
+
+
     
     
     </div>
@@ -157,18 +202,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
 
