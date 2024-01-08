@@ -69,3 +69,20 @@ var masonryGrid = new Masonry('#masonry-grid', {
   columnWidth: '.col-12',
   percentPosition: true
 });
+
+
+
+// heading 
+
+// $(window).scroll(function() {
+//   const 
+//     a = $(this).scrollTop(),
+//     b = 800;
+//   $("h1").css({
+//     backgroundPosition: "center " + a / 2 + "px" 
+//   });
+//   $(".parallax").css({ 
+//     top: a / 1.6 + "px", 
+//     opacity: 1 - a / b 
+//   });
+// });
