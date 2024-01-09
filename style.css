@@ -12,6 +12,9 @@ body {
     color: #341830;
 }
 
+
+
+
 .drop-shadow {
     text-shadow: 0 2px 2px rgba(44, 0, 0, 0.151);
 }
@@ -28,8 +31,7 @@ body {
     font-family: 'Yeseva One', serif; 
     color: #341830;
     text-shadow: 0 0 1px #341830;
-    font-size: 4rem;
-    transform: rotate(8deg);
+
 }
 
 
@@ -63,15 +65,15 @@ header {
     z-index: 1;
 }
 
-.layer2 {
-    /* transform: translateZ(-0.2px);
-    scale: 0.75; */
-    /* translate: 300px 600px; */
-}
+/* .layer2 {
+    transform: translateZ(-0.2px);
+    scale: 0.75; 
+    translate: 300px 600px; 
+} */
 
 .layer3 {
     /* transform: translateZ(1px); */
-    translate: 0 ;
+    translate: 0;
 }
 
 
@@ -342,4 +344,76 @@ html.is-leaving .transition-fade {
 .custom-img {
     width: 100%;
     height: auto;
+}
+
+
+
+
+
+/* index elements */
+
+.my-svg-items {
+    overflow: hidden; 
+    position: fixed;
+}
+
+/* .my-svg-item-1 .my-svg-item-2, .my-svg-item-3, .my-svg-item-4, .my-svg-item-5, .my-svg-item-6, .my-svg-item-7, .my-svg-item-8, .my-svg-item-9, .my-svg-item-10, .my-svg-item-11, .my-svg-item-12, .my-svg-item-13 {
+
+} */
+
+
+
+
+
+.my-svg-item-1 {
+    position: fixed;
+    left: -18%;
+    top: -4%;
+    transform: scaleX(1.2);
+}
+
+.my-svg-item-2 {
+    position: fixed;
+    background-color: #341830;
+    width: 100%;
+    height: 50px;
+
+    top: 77%;
+
+}
+
+.my-svg-item-3 {
+    position: fixed;
+
+
+    left: 20%;
+    top: 22%;
+
+}
+
+
+.my-svg-item-4 {
+    position: fixed;
+
+
+    right: 20%;
+    bottom: 20%;
+
+}
+
+
+
+
+.my-chevron-animation {
+    animation: chevron 1s ease-in-out infinite alternate;
+}
+
+@keyframes chevron {
+    from {
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
 }

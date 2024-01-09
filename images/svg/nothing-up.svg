@@ -1,0 +1,11 @@
+<svg id="svg" xmlns="http://www.w3.org/2000/svg" width="2160" height="284" viewBox="0 0 2160 284">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #bb9563;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="nothing_up" data-name="nothing up" class="cls-1" d="M-70,0S16.726-2,180,11s183.46,3.966,326,53,141.646,72.41,337,95,383.07,30.546,477,19,314.86-41.924,426-53,244.81-21.841,376-8,50,155,50,155l-454,11-308-19H668l-227-8L215,284-90,256Z"/>
+</svg>

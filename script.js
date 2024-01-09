@@ -86,3 +86,101 @@ var masonryGrid = new Masonry('#masonry-grid', {
 //     opacity: 1 - a / b 
 //   });
 // });
+
+
+
+
+// chevron heading
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTransformElement = document.querySelector('.my-chevron-opacity-header');
+
+  window.addEventListener('scroll', function () {
+      const scrollPosition = window.scrollY;
+
+      const translateYValue = 10 * scrollPosition + '2px'; 
+      const translateXValue = -4 * scrollPosition + 'px'; 
+      const opacityValue = 1 - (scrollPosition / 700);
+
+  
+      scrollTransformElement.style.transform = `translateY(${translateYValue})`;
+      scrollTransformElement.style.transform = `translateX(${translateXValue})`;
+      scrollTransformElement.style.opacity = opacityValue;
+
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTransformElement = document.querySelector('.my-navbar-animation');
+
+  window.addEventListener('scroll', function () {
+      
+      const scrollPosition = window.scrollY;
+      
+      if (scrollPosition > 100){
+      const translateXValue = 1.008 ** scrollPosition + 'px'; 
+     
+
+ 
+
+      scrollTransformElement.style.transform = `translateX(${translateXValue})`;
+  }
+
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTransformElement = document.querySelector('.my-navbar-block-animation');
+
+  window.addEventListener('scroll', function () {
+     
+      const scrollPosition = window.scrollY;
+
+
+
+
+      if (scrollPosition > 1050) {
+        const opacityValue = 1 - (scrollPosition / 700);
+
+     
+        scrollTransformElement.style.transform = `translateY(${translateYValue})`;
+        scrollTransformElement.style.transform = `translateX(${translateXValue})`;
+        scrollTransformElement.style.opacity = opacityValue;
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTransformElement = document.querySelector('.my-svg-item-3');
+
+  window.addEventListener('scroll', function () {
+      const scrollPosition = window.scrollY;
+
+      const translateXValue = -(1.01 ** scrollPosition) + 'px'; 
+     
+
+      if (scrollPosition > 0){
+      scrollTransformElement.style.transform = `translateX(${translateXValue})`;
+     }
+
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTransformElement = document.querySelector('.my-svg-item-4');
+
+  window.addEventListener('scroll', function () {
+      const scrollPosition = window.scrollY;
+
+      const translateXValue = (1.01 ** scrollPosition) + 'px'; 
+     
+
+      if (scrollPosition > 0){
+      scrollTransformElement.style.transform = `translateX(${translateXValue})`;
+     }
+
+  });
+});
