@@ -184,3 +184,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTransformElement = document.querySelector('.my-all-the-navbar-animation');
+
+  window.addEventListener('scroll', function () {
+      const scrollPosition = window.scrollY;
+
+      const translateYValue = -(1.0045 ** scrollPosition) + 'px'; 
+     
+
+      if (scrollPosition > 0){
+      scrollTransformElement.style.transform = `translateY(${translateYValue})`;
+     }
+
+  });
+});
