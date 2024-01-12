@@ -1,115 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Control Transform with Scrolling</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    /* Set a fixed height for the containers */
+    .equal-height-container {
+      /* Optionally set a minimum height */
+      min-height: 100px;
+      /* Overflow hidden to hide extra content if needed */
+      overflow: hidden;
+    }
 
-
-<!-- bootstrap css -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-<!-- fontawesome -->
-<script src="https://kit.fontawesome.com/952594155e.js" crossorigin="anonymous"></script>
-
-    <style>
-        body {
-            height: 200vh; /* To create enough scrollable space */
-        }
-
-        .scroll-transform-element-1, .scroll-transform-element-2 {
-            width: 100hv;
-            height: 1000px;
-            position: fixed;
-            transition: transform 0 ease-in-out;
-        }
-
-
-        .chevron-animation {
-            animation: chevron 1s ease-in-out infinite alternate;
-        }
-
-        @keyframes chevron {
-            from {
-                transform: translateY(10px);
-            }
-
-            to {
-                transform: translateY(0px);
-            }
-        }
-    
-
-
-    </style>
+    /* Ensure images fit entirely within the container without being cut off */
+    .equal-height-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+  <title>Bootstrap 5 - Maximum Height with Equal Height Images</title>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Your content goes here -->
-        <div class="scroll-transform-element-1"><div class="my-h2" style="font-size: 120px; margin-top: 200px; rotate:-7deg;">Tommy </div><div class="my-h2" style="font-size: 120px; margin-top: -40px; rotate:-7deg;"> Roy</div></div>
+<div class="container">
+  <div class="row g-3">
 
-        <div class="scroll-transform-element-2 my-text" style="font-size: 40px;  top: 60%; left: 40%; width: 600px;"><div class="my-h1" style="color: lightsalmon; font-family: Arial, Helvetica, sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eligendi eligendi odio perspiciatis quia.</div></div>
+    <!-- Object 1 -->
+    <div class="col-md-4 equal-height-container">
+      <!-- Your content goes here -->
+      <img src="images/peintures/projet-1.jpg" class="img-fluid" alt="Object 1">
     </div>
 
+    <!-- Object 2 -->
+    <div class="col-md-4 equal-height-container">
+      <!-- Your content goes here -->
+      <img src="images/peintures/projet-6.jpg" class="img-fluid" alt="Object 2">
+    </div>
 
-    <i class="fa-solid fa-chevron-down chevron-animation" style="position: fixed; top: 90%; left: 50%; font-size: 40px;"></i>
+    <!-- Object 3 -->
+    <div class="col-md-4 equal-height-container">
+      <!-- Your content goes here -->
+      <img src="images/peintures/projet-7.jpg" class="img-fluid" alt="Object 3">
+    </div>
 
-    <div style="height: 200px; background-color: red; margin-top: 150vh;"></div>
-    <div style="height: 2000px; background-color: beige;"></div>
+  </div>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const scrollTransformElement = document.querySelector('.scroll-transform-element-1');
+<script>
+  $(document).ready(function () {
+    // Calculate and set the maximum height for equal-height-containers
+    function setMaxHeight() {
+      var maxHeight = 0;
+      $('.equal-height-container img').each(function () {
+        var imgHeight = $(this).height();
+        maxHeight = Math.max(maxHeight, imgHeight);
+      });
 
-            window.addEventListener('scroll', function () {
-                // Adjust the transform value based on the scroll position
-                const scrollPosition = window.scrollY;
-          
-                const translateYValue = 10 * scrollPosition + '2px'; // You can adjust the multiplier as needed
-                const translateXValue = -4 * scrollPosition + 'px'; // You can adjust the multiplier as needed
-                const opacityValue = 1 - (scrollPosition / 500);
+      $('.equal-height-container').height(maxHeight);
+    }
 
-                // Apply the updated transform value
-                scrollTransformElement.style.transform = `translateY(${translateYValue})`;
-                scrollTransformElement.style.transform = `translateX(${translateXValue})`;
-                scrollTransformElement.style.opacity = opacityValue;
+    // Call the function on document ready and window resize
+    setMaxHeight();
+    $(window).resize(setMaxHeight);
+  });
+</script>
 
-            });
-        });
-
-
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const scrollTransformElement = document.querySelector('.scroll-transform-element-2');
-
-            window.addEventListener('scroll', function () {
-                // Adjust the transform value based on the scroll position
-                const scrollPosition = window.scrollY;
-          
-                const translateYValue = 10 * scrollPosition + '2px'; // You can adjust the multiplier as needed
-                const translateXValue = 5 * scrollPosition + 'px'; // You can adjust the multiplier as needed
-                const opacityValue = 1 - (scrollPosition / 500);
-
-                // Apply the updated transform value
-                scrollTransformElement.style.transform = `translateY(${translateYValue})`;
-                scrollTransformElement.style.transform = `translateX(${translateXValue})`;
-                scrollTransformElement.style.opacity = opacityValue;
-
-            });
-        });
-        
-    </script>
-
-
- <!-- jquery js -->
- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
- <!-- bootstrap js -->
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

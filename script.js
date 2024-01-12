@@ -156,23 +156,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const scrollTransformElement = document.querySelector('.my-svg-item-2');
-
-//   window.addEventListener('scroll', function () {
-     
-//       const scrollPosition = window.scrollY;
-
-//         const opacityValue = 1 - (scrollPosition- 300 / 700) + 'px';
-
-     
-//         scrollTransformElement.style.transform = `translateX(${translateXValue})`;
-//         scrollTransformElement.style.opacity = opacityValue;
-    
-//   });
-// });
-
-
 
 // Tommy Roy text
 
@@ -204,31 +187,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const translateXValue = (1.01 ** scrollPosition) + 'px'; 
       const opacityValue = 1 - (scrollPosition / 1000);
-     
   
       scrollTransformElement.style.transform = `translateX(${translateXValue})`;
       scrollTransformElement.style.opacity = opacityValue;
- 
-
   });
 });
+
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
   const scrollTransformElement = document.querySelector('.my-svg-item-1');
 
   window.addEventListener('scroll', function () {
-      const scrollPosition = window.scrollY;
+    const scrollPosition = window.scrollY;
+    
+    const translateYValue = -(1.0045 ** scrollPosition) + 'px'; 
 
-      const translateYValue = -(1.0045 ** scrollPosition) + 'px'; 
-     
-
-  
-      scrollTransformElement.style.transform = `translateY(${translateYValue})`;
-  
-
+    scrollTransformElement.style.transform = `translateY(${translateYValue})`;
   });
 });
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -236,14 +219,76 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener('scroll', function () {
       const scrollPosition = window.scrollY;
-
+   
       const translateXValue = (1.007 ** scrollPosition) + 'px'; 
       const opacityValue = 1 - (scrollPosition / 1000);
-     
   
       scrollTransformElement.style.transform = `translateX(${translateXValue})`;
       scrollTransformElement.style.opacity = opacityValue;
- 
-
   });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTransformElement = document.querySelector('.my-svg-item-5');
+
+  window.addEventListener('scroll', function () {
+      const scrollPosition = window.scrollY;
+   
+      const translateYValue = (1.01 ** scrollPosition) + 'px'; 
+  
+      scrollTransformElement.style.transform = `translateY(${translateYValue})`;
+  });
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTransformElement = document.querySelector('.my-svg-item-2');
+
+  window.addEventListener('scroll', function () {
+      const scrollPosition = window.scrollY;
+   
+      const translateYValue = (1.008 ** scrollPosition) + 'px'; 
+  
+      scrollTransformElement.style.transform = `translateY(${translateYValue})`;
+  });
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTransformElement = document.querySelector('.my-svg-item-6');
+  
+  window.addEventListener('scroll', function () {
+    const scrollPosition = window.scrollY;
+    
+    const translateYValue = (1.010 ** scrollPosition) + 'px'; 
+    
+    scrollTransformElement.style.transform = `translateY(${translateYValue})`;
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTransformElement = document.querySelector('.my-svg-item-8');
+
+  window.addEventListener('scroll', function () {
+      const scrollPosition = window.scrollY;
+   
+      const translateYValue = (1.012 ** scrollPosition) + 'px'; 
+  
+      scrollTransformElement.style.transform = `translateY(${translateYValue})`;
+  });
+});
+
+
+
+
+
+
+
+
