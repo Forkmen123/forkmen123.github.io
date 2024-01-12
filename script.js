@@ -24,39 +24,78 @@
 
 // data enlargeable
 
-$('img[data-enlargeable]').addClass('img-enlargeable').click(function() {
+
+
+// $('img[data-enlargeable]').addClass('img-enlargeable').click(function() {
+//     var src = $(this).attr('src');
+//     var modal;
+  
+//     function removeModal() {
+//       modal.remove();
+//       $('body').off('keyup.modal-close');
+//     }
+//     modal = $('<div>').css({
+//       background: 'RGBA(0,0,0,.5) url(' + src + ') no-repeat center',
+//       backgroundSize: 'contain',
+//       width: '100%',
+//       height: '100%',
+//       position: 'fixed',
+//       zIndex: '10000',
+//       top: '0',
+//       left: '0',
+//       cursor: 'zoom-out'
+//     }).click(function() {
+//       removeModal();
+//     }).appendTo('body');
+//     //handling ESC
+//     $('body').on('keyup.modal-close', function(e) {
+//       if (e.key === 'Escape') {
+//         removeModal();
+//       }
+//     });
+//   });
+
+
+  $(document).on('click', 'img[data-enlargeable]', function() {
     var src = $(this).attr('src');
     var modal;
-  
+
     function removeModal() {
-      modal.remove();
-      $('body').off('keyup.modal-close');
+        modal.remove();
+        $('body').off('keyup.modal-close');
     }
+
     modal = $('<div>').css({
-      background: 'RGBA(0,0,0,.5) url(' + src + ') no-repeat center',
-      backgroundSize: 'contain',
-      width: '100%',
-      height: '100%',
-      position: 'fixed',
-      zIndex: '10000',
-      top: '0',
-      left: '0',
-      cursor: 'zoom-out'
+        background: 'RGBA(0,0,0,.5) url(' + src + ') no-repeat center',
+        backgroundSize: 'contain',
+        width: '100%',
+        height: '100%',
+        position: 'fixed',
+        zIndex: '10000',
+        top: '0',
+        left: '0',
+        cursor: 'zoom-out'
     }).click(function() {
-      removeModal();
-    }).appendTo('body');
-    //handling ESC
-    $('body').on('keyup.modal-close', function(e) {
-      if (e.key === 'Escape') {
         removeModal();
-      }
+    }).appendTo('body');
+
+    // Handling ESC key to close the modal
+    $('body').on('keyup.modal-close', function(e) {
+        if (e.key === 'Escape') {
+            removeModal();
+        }
     });
-  });
+
+    // Prevent multiple click events by unbinding the handler
+    $(this).off('click').click(function() {
+        removeModal();
+    });
+});
 
 
 
 // masonry
-
+$(document).ready(function() {
 var masonryGrid = new Masonry('#masonry-grid', {
   itemSelector: '.col-md-6', // Adjust this selector based on your column classes
   columnWidth: '.col-md-6',
@@ -69,7 +108,7 @@ var masonryGrid = new Masonry('#masonry-grid', {
   columnWidth: '.col-12',
   percentPosition: true
 });
-
+});
 
 
 
@@ -187,6 +226,24 @@ document.addEventListener("DOMContentLoaded", function () {
   
       scrollTransformElement.style.transform = `translateY(${translateYValue})`;
   
+
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTransformElement = document.querySelector('.my-svg-item-7');
+
+  window.addEventListener('scroll', function () {
+      const scrollPosition = window.scrollY;
+
+      const translateXValue = (1.007 ** scrollPosition) + 'px'; 
+      const opacityValue = 1 - (scrollPosition / 1000);
+     
+  
+      scrollTransformElement.style.transform = `translateX(${translateXValue})`;
+      scrollTransformElement.style.opacity = opacityValue;
+ 
 
   });
 });

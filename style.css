@@ -415,6 +415,16 @@ html.is-leaving .transition-fade {
 
 }
 
+.my-svg-item-7 {
+    position: fixed;
+
+
+    right: 30%;
+    bottom: 30%;
+    width: 500px;
+
+}
+
 
 
 .my-chevron-animation {
