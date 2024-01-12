@@ -367,7 +367,7 @@ html.is-leaving .transition-fade {
 
 .my-svg-item-1 {
     position: fixed;
-    left: -18%;
+
     top: -4%;
     transform: scaleX(1.2);
 }
@@ -401,6 +401,11 @@ html.is-leaving .transition-fade {
 
 }
 
+.my-svg-item-4 a {
+    text-decoration: none; color: #d7cdbc;
+}
+
+
 .my-svg-item-5 {
     position: fixed;
 
@@ -423,5 +428,24 @@ html.is-leaving .transition-fade {
 
     to {
         transform: translateY(0px);
+    }
+}
+
+
+.my-text-appearing {
+    animation: text 0.5s ease-in;
+ 
+}
+
+@keyframes text {
+    from {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+
     }
 }

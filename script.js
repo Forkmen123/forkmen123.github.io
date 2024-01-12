@@ -72,44 +72,34 @@ var masonryGrid = new Masonry('#masonry-grid', {
 
 
 
-// heading 
-
-// $(window).scroll(function() {
-//   const 
-//     a = $(this).scrollTop(),
-//     b = 800;
-//   $("h1").css({
-//     backgroundPosition: "center " + a / 2 + "px" 
-//   });
-//   $(".parallax").css({ 
-//     top: a / 1.6 + "px", 
-//     opacity: 1 - a / b 
-//   });
-// });
 
 
 
 
-// chevron heading
+/////////////////////////////////////// heading 
+
+
+
+
+
+// chevron heading opacity
 
 document.addEventListener("DOMContentLoaded", function () {
   const scrollTransformElement = document.querySelector('.my-chevron-opacity-header');
 
   window.addEventListener('scroll', function () {
-      const scrollPosition = window.scrollY;
 
-      const translateYValue = 10 * scrollPosition + '2px'; 
-      const translateXValue = -4 * scrollPosition + 'px'; 
+      const scrollPosition = window.scrollY;
+      
       const opacityValue = 1 - (scrollPosition / 700);
 
-  
-      scrollTransformElement.style.transform = `translateY(${translateYValue})`;
-      scrollTransformElement.style.transform = `translateX(${translateXValue})`;
       scrollTransformElement.style.opacity = opacityValue;
-
   });
 });
 
+
+
+// navbar text
 
 document.addEventListener("DOMContentLoaded", function () {
   const scrollTransformElement = document.querySelector('.my-navbar-animation');
@@ -117,41 +107,35 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener('scroll', function () {
       
       const scrollPosition = window.scrollY;
+
+      const translateXValue = (1.008) ** scrollPosition + 'px'; 
+      const opacityValue = 1 - (scrollPosition / 2000);
       
-      if (scrollPosition > 100){
-      const translateXValue = 1.008 ** scrollPosition + 'px'; 
-     
-
- 
-
       scrollTransformElement.style.transform = `translateX(${translateXValue})`;
-  }
-
+      scrollTransformElement.style.opacity = opacityValue;
   });
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const scrollTransformElement = document.querySelector('.my-navbar-block-animation');
+// document.addEventListener("DOMContentLoaded", function () {
+//   const scrollTransformElement = document.querySelector('.my-svg-item-2');
 
-  window.addEventListener('scroll', function () {
+//   window.addEventListener('scroll', function () {
      
-      const scrollPosition = window.scrollY;
+//       const scrollPosition = window.scrollY;
 
-
-
-
-      if (scrollPosition > 1050) {
-        const opacityValue = 1 - (scrollPosition / 700);
+//         const opacityValue = 1 - (scrollPosition- 300 / 700) + 'px';
 
      
-        scrollTransformElement.style.transform = `translateY(${translateYValue})`;
-        scrollTransformElement.style.transform = `translateX(${translateXValue})`;
-        scrollTransformElement.style.opacity = opacityValue;
-    }
-  });
-});
+//         scrollTransformElement.style.transform = `translateX(${translateXValue})`;
+//         scrollTransformElement.style.opacity = opacityValue;
+    
+//   });
+// });
 
+
+
+// Tommy Roy text
 
 document.addEventListener("DOMContentLoaded", function () {
   const scrollTransformElement = document.querySelector('.my-svg-item-3');
@@ -160,14 +144,18 @@ document.addEventListener("DOMContentLoaded", function () {
       const scrollPosition = window.scrollY;
 
       const translateXValue = -(1.01 ** scrollPosition) + 'px'; 
-     
+      const opacityValue = 1 - (scrollPosition / 1000);
+      
 
-      if (scrollPosition > 0){
       scrollTransformElement.style.transform = `translateX(${translateXValue})`;
-     }
+      scrollTransformElement.style.opacity = opacityValue;
+     
 
   });
 });
+
+
+// Voir plus button
 
 document.addEventListener("DOMContentLoaded", function () {
   const scrollTransformElement = document.querySelector('.my-svg-item-4');
@@ -176,18 +164,19 @@ document.addEventListener("DOMContentLoaded", function () {
       const scrollPosition = window.scrollY;
 
       const translateXValue = (1.01 ** scrollPosition) + 'px'; 
+      const opacityValue = 1 - (scrollPosition / 1000);
      
-
-      if (scrollPosition > 0){
+  
       scrollTransformElement.style.transform = `translateX(${translateXValue})`;
-     }
+      scrollTransformElement.style.opacity = opacityValue;
+ 
 
   });
 });
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  const scrollTransformElement = document.querySelector('.my-all-the-navbar-animation');
+  const scrollTransformElement = document.querySelector('.my-svg-item-1');
 
   window.addEventListener('scroll', function () {
       const scrollPosition = window.scrollY;
@@ -195,9 +184,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const translateYValue = -(1.0045 ** scrollPosition) + 'px'; 
      
 
-      if (scrollPosition > 0){
+  
       scrollTransformElement.style.transform = `translateY(${translateYValue})`;
-     }
+  
 
   });
 });
