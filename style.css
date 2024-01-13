@@ -343,6 +343,9 @@ header {
 
 }
 
+
+
+
 /* pinceau up */
 .my-svg-item-6 {
     position: fixed;
@@ -371,6 +374,7 @@ header {
     bottom: -2%;
     left: 5;
 
+        width: 100%;
 }
 
 
@@ -426,5 +430,95 @@ footer img {
     }
 
 
+}
 
+
+
+
+
+
+/* background svg media queries */
+
+@media (max-width: 2055px) {
+    .my-svg-item-5 {
+        bottom: -10%;
+    }
+
+    .my-svg-item-2 {
+        bottom: -12%;
+    }
+
+    .my-svg-item-6 {
+        bottom: 4% !important;
+
+        left: 2%;
+        width: 120%;
+    }
+
+    .my-svg-item-8 {
+        left: 4%;
+        scale: 1.2;
+        bottom: 5%;
+    }
+
+
+}
+
+@media (max-width: 1650px) {
+    .my-svg-item-5 {
+        bottom: -8%;
+        scale: 1.5;
+        left: 12%;
+    }
+
+    .my-svg-item-8 {
+        left: -27%;
+        scale: 1.2;
+        bottom: 5%;
+    }
+}
+
+@media (max-width: 1500px) {
+    .my-svg-item-5 {
+        bottom: -5%;
+        scale: 1.7;
+        left: 10%;
+    }
+
+    .my-svg-item-2 {
+        bottom: -8%;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .my-svg-item-5 {
+        bottom: -3%;
+        scale: 2.1;
+        left: 23%;
+    }
+
+    .my-svg-item-2 {
+        bottom: -3%;
+    }
+
+    .my-svg-item-6 {
+        left: -4%;
+    }
+
+    .my-svg-item-8 {
+        left: -18%;
+        bottom: -2%;
+    }
+}
+
+@media (max-width: 880px) {
+    .my-svg-item-5, .my-svg-item-2, .my-svg-item-6 {
+        display: none;
+    }
+    .my-svg-item-8 {
+        scale: 12;
+        left: -25%;
+        bottom: -80%;
+    }
 }
