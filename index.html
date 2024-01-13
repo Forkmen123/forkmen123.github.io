@@ -51,7 +51,7 @@
 
 <header id="section1">
     
-    <div class="my-svg-items" style="position: relative;">
+    <div class="my-svg-items">
         <div class="my-svg-item-1" >
             <img draggable="false" src="images/svg/navbar.svg">
         </div>
@@ -78,14 +78,14 @@
         </div>
     
     
-        <div class="my-svg-item-7 d-none">
+        <div class="my-svg-item-7">
             <div style="font-size: 2rem;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo explicabo corporis dicta? </div>
         </div>
     
     
-        <div class="my-svg-item-3 my-text-appearing d-none">
-            <div class="my-h2" style="font-size: 8rem;">Tommy </div>
-            <div class="my-h2 lh-1" style="font-size: 8rem;">Roy </div>
+        <div class="my-svg-item-3 my-text-appearing">
+            <div class="my-h2" style="font-size: 9rem;">Tommy </div>
+            <div class="my-h2 lh-1" style="font-size: 9rem;">Roy </div>
         </div>
     
     
@@ -110,7 +110,7 @@
         </div>
     </div>
     
-    <i class="fa-solid fa-chevron-down my-chevron-opacity-header my-chevron-animation" style="position: fixed; top: 84%; left: 50%; font-size: 40px; z-index: 1000;"></i>
+    <a href="#section"><i class="fa-solid fa-chevron-down my-chevron-opacity-header my-chevron-animation" style="position: fixed; top: 84%; left: 50%; font-size: 40px; z-index: 1000; color: #341830;"></i></a>
 </header>
 
 
@@ -175,8 +175,8 @@
 <div style="height: 1500px;" ></div>
 <div style="height: 100px; opacity: 0;" id="section">rien</div>
 
-<div class="row">
-    <div class="col-5 p-4">
+<div class="row" style="margin-bottom: 130px;">
+    <div class="col-xl-5 col-lg-5 p-5">
         <img src="images/photos-de-moi/petit-moi-carré.png" class="img-fluid rounded-5 shadow" alt="">
     </div>
 
@@ -186,43 +186,46 @@
         <p class="ms-5 mt-5 fs-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio odit necessitatibus unde dicta iste. Repellat eum dolorem porro laudantium, et mollitia?</p>
 
         <div class="d-flex justify-content-end mt-5 me-5">
-            <button type="button" class="btn btn-lg btn-primary ms-5 shadow ">Contacter</button>
+            <button type="button" style="scale: 1.5" class="btn btn-lg btn-primary ms-5 shadow ">Contacter</button>
         </div>
     </div>
 </div>
 
 
-
-<!-- <div class="my-h2 display-2 mt-4">Mes projets récents</div> -->
-
-    
-    <!-- <img src="images/peintures/projet-5.jpg" alt="" style="height: 200px;">
-    <img src="images/peintures/projet-1.jpg" alt="" style="height: 200px;">
-    <img src="images/peintures/projet-2.jpg" alt="" style="height: 200px;"> -->
-
-
-    <!-- <div class="col"><img src="images/peintures/projet-5.jpg" alt="" class="img-fluid my-projects shadow rounded-4"></div>
-    <div class="col"><img src="images/peintures/projet-1.jpg" alt="" class="img-fluid my-projects shadow rounded-4"></div>
-    <div class="col"><img src="images/peintures/projet-2.jpg" alt="" class="img-fluid my-projects shadow rounded-4"></div> -->
-
     <div class="row d-flex mt-5 mb-4">
-        <div class="my-h2 display-2 mt-4 mb-5">Mes projets récents</div>
+        <div class="my-h2 display-2 mt-4 mb-5">Aperçu de mes projets</div>
     
-        <div class="col">
-            <img src="images/peintures/projet-5.jpg" alt="" class="img-fluid my-projects shadow rounded-4">
+        <div class="col-12 col-md-6 col-lg-4 mt-3">
+            <a href="projet-1.html"><img src="images/peintures/projet-1.jpg" alt="" class="img-fluid my-projects shadow rounded-4"></a>
         </div>
-        <div class="col">
-            <img src="images/peintures/projet-1.jpg" alt="" class="img-fluid my-projects shadow rounded-4">
+        <div class="col-12 col-md-6 col-lg-4 mt-3">
+            <a href="projet-5.html"><img src="images/peintures/projet-5.jpg" alt="" class="img-fluid my-projects shadow rounded-4"></a>
         </div>
-        <div class="col">
-            <img src="images/peintures/projet-2.jpg" alt="" class="img-fluid my-projects shadow rounded-4">
+        <div class="col-12 col-lg-4 mt-3 d-lg-block d-none">
+            <a href="projet-2.html"><img src="images/peintures/projet-2.jpg" alt="" class="img-fluid my-projects shadow rounded-4"></a>
         </div>
-
-
-      
     </div>
 
-    <button type="button" class="btn btn-lg btn-primary ms-5 shadow d-flex justify-content-end mb-5">Tous les projets</button>
+    <div class="d-flex justify-content-end p-5 me-5" style="margin-top: -140px;">
+        <a href="projets-peinture.html"><button type="button" class="btn btn-lg btn-primary ms-5 shadow  mb-5" style="scale: 1.5;">Toutes les peintures</button></a>
+    </div>
+  
+
+
+    <div class="row d-flex mb-4" style="margin-top: 122px;">
+    
+        <div class="col-12 col-md-4">
+            <a href="#"><img src="images/page-couverture.png" alt="" class="img-fluid my-projects shadow rounded-4"></a>
+        </div>
+        <div class="col">
+            <a href="#"><img src="images/raft.png" alt="" class="img-fluid my-projects shadow rounded-4"></a>
+        </div>
+        
+    </div>
+
+    <div class="d-flex justify-content-end p-5 me-5" style="margin-top: -75px;">
+        <a href="projets-peinture.html"><button type="button" class="btn btn-lg btn-primary ms-5 shadow  mb-5" style="scale: 1.5;">Autres projets</button></a>
+    </div>
   
          
 

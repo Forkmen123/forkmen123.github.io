@@ -288,36 +288,42 @@ header {
 
 
 
-
+/* navbar */
 .my-svg-item-1 {
     position: fixed;
+    width: 100%;
+    top: -5%;
 
-    top: -4%;
-    transform: scaleX(1.2);
+    scale: 1.5;
+    
 }
 
+/* nothing up */
 .my-svg-item-2 {
     position: fixed;
 
-    bottom: -5%;
+    bottom: -18%;
+    left: -5%;
+    width: 120%;
 }
 
+/* Tommy Roy */
 .my-svg-item-3 {
     position: fixed;
 
 
-    left: 20%;
+    left: 28%;
     top: 22%;
 
 }
 
-
+/* Voir plus button */
 .my-svg-item-4 {
     position: fixed;
 
 
-    right: 20%;
-    bottom: 20%;
+    right: 30%;
+    bottom: 34%;
 
 }
 
@@ -326,40 +332,44 @@ header {
 }
 
 
+/* paint tube */
 .my-svg-item-5 {
     position: fixed;
 
-    scale: 1.3;
-    left: -10%;
-    bottom: -3%;
-    width: 100%;
+   
+    scale: 1.4;
+    bottom: -12%; 
+    width: 90%;
 
 }
 
+/* pinceau up */
 .my-svg-item-6 {
     position: fixed;
-
-    left: -4%;
-    bottom: -10%;
+    width: 100%;
+    scale: 1.3;
+    bottom: -2%;
+    right: -8%;
 
 }
 
-
+/* header text */
 .my-svg-item-7 {
     position: fixed;
 
-
     right: 30%;
-    bottom: 30%;
+    bottom: 45%;
     width: 500px;
 
 }
 
+/* palette */
 .my-svg-item-8 {
     position: fixed;
 
-  left: -5%;
-    bottom: -10%;
+    scale: 1.8;
+    bottom: -2%;
+    left: 5;
 
 }
 
@@ -403,5 +413,18 @@ header {
 
 footer {
     overflow: hidden;
-    transform: translateY(100px);
+}
+
+
+footer img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    footer img {
+        scale: 1.3;
+    }
+
+
+
 }

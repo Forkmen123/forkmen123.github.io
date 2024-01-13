@@ -1,73 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <style>
-    /* Set a fixed height for the containers */
-    .equal-height-container {
-      /* Optionally set a minimum height */
-      min-height: 100px;
-      /* Overflow hidden to hide extra content if needed */
-      overflow: hidden;
-    }
-
-    /* Ensure images fit entirely within the container without being cut off */
-    .equal-height-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  </style>
-  <title>Bootstrap 5 - Maximum Height with Equal Height Images</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-
-<div class="container">
-  <div class="row g-3">
-
-    <!-- Object 1 -->
-    <div class="col-md-4 equal-height-container">
-      <!-- Your content goes here -->
-      <img src="images/peintures/projet-1.jpg" class="img-fluid" alt="Object 1">
-    </div>
-
-    <!-- Object 2 -->
-    <div class="col-md-4 equal-height-container">
-      <!-- Your content goes here -->
-      <img src="images/peintures/projet-6.jpg" class="img-fluid" alt="Object 2">
-    </div>
-
-    <!-- Object 3 -->
-    <div class="col-md-4 equal-height-container">
-      <!-- Your content goes here -->
-      <img src="images/peintures/projet-7.jpg" class="img-fluid" alt="Object 3">
-    </div>
-
-  </div>
-</div>
-
-<script>
-  $(document).ready(function () {
-    // Calculate and set the maximum height for equal-height-containers
-    function setMaxHeight() {
-      var maxHeight = 0;
-      $('.equal-height-container img').each(function () {
-        var imgHeight = $(this).height();
-        maxHeight = Math.max(maxHeight, imgHeight);
-      });
-
-      $('.equal-height-container').height(maxHeight);
-    }
-
-    // Call the function on document ready and window resize
-    setMaxHeight();
-    $(window).resize(setMaxHeight);
-  });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>
