@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       const scrollPosition = window.scrollY;
 
-      const translateXValue = (1.008) ** scrollPosition + 'px'; 
+      const translateXValue = (1.0135) ** scrollPosition + 'px'; 
       const opacityValue = 1 - (scrollPosition / 2000);
       
       scrollTransformElement.style.transform = `translateX(${translateXValue})`;
@@ -161,6 +161,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const scrollTransformElement = document.querySelector('.my-svg-item-3');
+
+  window.addEventListener('scroll', function () {
+      const scrollPosition = window.scrollY;
+
+      const translateXValue = -(1.01 ** scrollPosition) + 'px'; 
+      const opacityValue = 1 - (scrollPosition / 1000);
+      
+
+      scrollTransformElement.style.transform = `translateX(${translateXValue})`;
+      scrollTransformElement.style.opacity = opacityValue;
+     
+
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTransformElement = document.querySelector('.my-svg-item-9');
 
   window.addEventListener('scroll', function () {
       const scrollPosition = window.scrollY;

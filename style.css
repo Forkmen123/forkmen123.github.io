@@ -292,7 +292,7 @@ header {
 .my-svg-item-1 {
     position: fixed;
     width: 100%;
-    top: -5%;
+    top: -3.7%;
 
     scale: 1.5;
     
@@ -312,8 +312,8 @@ header {
     position: fixed;
 
 
-    left: 28%;
-    top: 22%;
+    left: 18%;
+    top: 18%;
 
 }
 
@@ -322,8 +322,8 @@ header {
     position: fixed;
 
 
-    right: 30%;
-    bottom: 34%;
+    right: 27%;
+    bottom: 40%;
 
 }
 
@@ -360,8 +360,8 @@ header {
 .my-svg-item-7 {
     position: fixed;
 
-    right: 30%;
-    bottom: 45%;
+    right: 25%;
+    bottom: 53%;
     width: 500px;
 
 }
@@ -376,6 +376,17 @@ header {
 
         width: 100%;
 }
+
+/* Tommy Roy sur une ligne  */
+.my-svg-item-9 {
+    position: fixed;
+    
+    top: 22%;
+    left: 12%;
+}
+
+
+
 
 
 
@@ -410,7 +421,6 @@ header {
     to {
         opacity: 1;
         transform: scale(1);
-
     }
 }
 
@@ -438,6 +448,7 @@ footer img {
 
 
 /* background svg media queries */
+
 
 @media (max-width: 2055px) {
     .my-svg-item-5 {
@@ -520,5 +531,109 @@ footer img {
         scale: 12;
         left: -25%;
         bottom: -80%;
+    }
+
+    .my-chevron-123 {
+        bottom: 4% !important;
+        font-size: 50px !important;
+    }
+
+}
+
+
+
+/* text media query */
+
+@media (max-width: 2262px) {
+    
+    .my-svg-item-7 {
+        right: 20%
+    }
+
+    .my-svg-item-4 {
+        right: 20%
+    }
+
+}
+
+
+
+@media (max-width: 1993px) {
+    
+    .my-svg-item-7 {
+        bottom: 40%;
+    }
+
+    .my-svg-item-4 {
+        bottom: 30%;
+    }
+}
+
+
+
+@media (max-width: 1520px) {
+    
+    .my-svg-item-7 {
+        right: 15%;
+    }
+
+}
+
+
+@media (max-width: 1400px) {
+    
+    
+    .my-svg-item-3 .my-h2 {
+        display: none;
+    }
+
+
+
+}
+
+@media (max-width: 880px) {
+    .my-svg-item-9 .my-h2 {
+        font-size: 7rem !important; 
+     
+    }
+
+    .my-svg-item-9 {
+        top: 15%;
+        left: 8% !important;
+        margin-right: 160px;
+    }
+
+    .my-svg-item-4 {
+        bottom: 20%;
+    }
+
+    .my-svg-item-7 {
+        bottom: 32%;
+        left: 12%;
+    }
+}
+
+
+@media (max-width: 575px) {
+    .my-svg-item-7 div {
+        font-size: 1.8rem !important;
+    }
+}
+
+@media (max-width: 517px) {
+    .my-svg-item-7 div {
+        font-size: 1.4rem !important; 
+ 
+    }
+}
+
+
+
+
+
+
+@media (max-width: 992px) {
+    .my-button-index {
+        scale: 1.1 !important;
     }
 }
