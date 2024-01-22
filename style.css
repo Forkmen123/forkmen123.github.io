@@ -10,6 +10,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: #d7cdbc;
     color: #341830;
+    box-sizing: border-box;
 }
 
 
@@ -33,6 +34,21 @@ body {
     text-shadow: 0 0 1px #341830;
 
 }
+
+.my-h3 {
+    font-family: 'Yeseva One', serif; 
+    color: #341830;
+    text-shadow: 0 0 1px #341830;
+
+}
+
+@media (max-width: 992px) {
+
+    
+
+}
+
+
 
 
 
@@ -425,14 +441,12 @@ header {
 }
 
 
-footer {
+/* footer {
     overflow: hidden;
-}
+} */
 
 
-footer img {
-    width: 100%;
-}
+
 
 @media (max-width: 768px) {
     footer img {

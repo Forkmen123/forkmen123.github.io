@@ -130,7 +130,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const scrollPosition = window.scrollY;
       
-      const opacityValue = 1 - (scrollPosition / 700);
+      // const opacityValue = 1 - (scrollPosition / 700);
+      const opacityValue = 1 - (scrollPosition / 300);
 
       scrollTransformElement.style.opacity = opacityValue;
   });
@@ -147,7 +148,8 @@ document.addEventListener("DOMContentLoaded", function () {
       
       const scrollPosition = window.scrollY;
 
-      const translateXValue = (1.0135) ** scrollPosition + 'px'; 
+      // const translateXValue = (1.0135) ** scrollPosition + 'px'; 
+      const translateXValue = (1.025) ** scrollPosition + 'px'; 
       const opacityValue = 1 - (scrollPosition / 2000);
       
       scrollTransformElement.style.transform = `translateX(${translateXValue})`;
@@ -159,56 +161,56 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Tommy Roy text
 
-document.addEventListener("DOMContentLoaded", function () {
-  const scrollTransformElement = document.querySelector('.my-svg-item-3');
+// document.addEventListener("DOMContentLoaded", function () {
+//   const scrollTransformElement = document.querySelector('.my-svg-item-3');
 
-  window.addEventListener('scroll', function () {
-      const scrollPosition = window.scrollY;
+//   window.addEventListener('scroll', function () {
+//       const scrollPosition = window.scrollY;
 
-      const translateXValue = -(1.01 ** scrollPosition) + 'px'; 
-      const opacityValue = 1 - (scrollPosition / 1000);
+//       const translateXValue = -(1.01 ** scrollPosition) + 'px'; 
+//       const opacityValue = 1 - (scrollPosition / 1000);
       
 
-      scrollTransformElement.style.transform = `translateX(${translateXValue})`;
-      scrollTransformElement.style.opacity = opacityValue;
+//       scrollTransformElement.style.transform = `translateX(${translateXValue})`;
+//       scrollTransformElement.style.opacity = opacityValue;
      
 
-  });
-});
+//   });
+// });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const scrollTransformElement = document.querySelector('.my-svg-item-9');
+// document.addEventListener("DOMContentLoaded", function () {
+//   const scrollTransformElement = document.querySelector('.my-svg-item-9');
 
-  window.addEventListener('scroll', function () {
-      const scrollPosition = window.scrollY;
+//   window.addEventListener('scroll', function () {
+//       const scrollPosition = window.scrollY;
 
-      const translateXValue = -(1.01 ** scrollPosition) + 'px'; 
-      const opacityValue = 1 - (scrollPosition / 1000);
+//       const translateXValue = -(1.01 ** scrollPosition) + 'px'; 
+//       const opacityValue = 1 - (scrollPosition / 1000);
       
 
-      scrollTransformElement.style.transform = `translateX(${translateXValue})`;
-      scrollTransformElement.style.opacity = opacityValue;
+//       scrollTransformElement.style.transform = `translateX(${translateXValue})`;
+//       scrollTransformElement.style.opacity = opacityValue;
      
 
-  });
-});
+//   });
+// });
 
 
 // Voir plus button
 
-document.addEventListener("DOMContentLoaded", function () {
-  const scrollTransformElement = document.querySelector('.my-svg-item-4');
+// document.addEventListener("DOMContentLoaded", function () {
+//   const scrollTransformElement = document.querySelector('.my-svg-item-4');
 
-  window.addEventListener('scroll', function () {
-      const scrollPosition = window.scrollY;
+//   window.addEventListener('scroll', function () {
+//       const scrollPosition = window.scrollY;
 
-      const translateXValue = (1.01 ** scrollPosition) + 'px'; 
-      const opacityValue = 1 - (scrollPosition / 1000);
+//       const translateXValue = (1.01 ** scrollPosition) + 'px'; 
+//       const opacityValue = 1 - (scrollPosition / 1000);
   
-      scrollTransformElement.style.transform = `translateX(${translateXValue})`;
-      scrollTransformElement.style.opacity = opacityValue;
-  });
-});
+//       scrollTransformElement.style.transform = `translateX(${translateXValue})`;
+//       scrollTransformElement.style.opacity = opacityValue;
+//   });
+// });
 
 
 
@@ -220,8 +222,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener('scroll', function () {
     const scrollPosition = window.scrollY;
-    
-    const translateYValue = -(1.0045 ** scrollPosition) + 'px'; 
+
+    // const translateYValue = -(1.0045 ** scrollPosition) + 'px'; 
+    const translateYValue = -(1.0107 ** scrollPosition) + 'px'; 
 
     scrollTransformElement.style.transform = `translateY(${translateYValue})`;
   });
@@ -231,76 +234,76 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const scrollTransformElement = document.querySelector('.my-svg-item-7');
+// document.addEventListener("DOMContentLoaded", function () {
+//   const scrollTransformElement = document.querySelector('.my-svg-item-7');
 
-  window.addEventListener('scroll', function () {
-      const scrollPosition = window.scrollY;
+//   window.addEventListener('scroll', function () {
+//       const scrollPosition = window.scrollY;
    
-      const translateXValue = (1.007 ** scrollPosition) + 'px'; 
-      const opacityValue = 1 - (scrollPosition / 1000);
+//       const translateXValue = (1.007 ** scrollPosition) + 'px'; 
+//       const opacityValue = 1 - (scrollPosition / 1000);
   
-      scrollTransformElement.style.transform = `translateX(${translateXValue})`;
-      scrollTransformElement.style.opacity = opacityValue;
-  });
-});
+//       scrollTransformElement.style.transform = `translateX(${translateXValue})`;
+//       scrollTransformElement.style.opacity = opacityValue;
+//   });
+// });
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const scrollTransformElement = document.querySelector('.my-svg-item-5');
+// document.addEventListener("DOMContentLoaded", function () {
+//   const scrollTransformElement = document.querySelector('.my-svg-item-5');
 
-  window.addEventListener('scroll', function () {
-      const scrollPosition = window.scrollY;
+//   window.addEventListener('scroll', function () {
+//       const scrollPosition = window.scrollY;
    
-      const translateYValue = (1.01 ** scrollPosition) + 'px'; 
+//       const translateYValue = (1.01 ** scrollPosition) + 'px'; 
   
-      scrollTransformElement.style.transform = `translateY(${translateYValue})`;
-  });
-});
+//       scrollTransformElement.style.transform = `translateY(${translateYValue})`;
+//   });
+// });
 
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const scrollTransformElement = document.querySelector('.my-svg-item-2');
+// document.addEventListener("DOMContentLoaded", function () {
+//   const scrollTransformElement = document.querySelector('.my-svg-item-2');
 
-  window.addEventListener('scroll', function () {
-      const scrollPosition = window.scrollY;
+//   window.addEventListener('scroll', function () {
+//       const scrollPosition = window.scrollY;
    
-      const translateYValue = (1.008 ** scrollPosition) + 'px'; 
+//       const translateYValue = (1.008 ** scrollPosition) + 'px'; 
   
-      scrollTransformElement.style.transform = `translateY(${translateYValue})`;
-  });
-});
+//       scrollTransformElement.style.transform = `translateY(${translateYValue})`;
+//   });
+// });
 
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const scrollTransformElement = document.querySelector('.my-svg-item-6');
+// document.addEventListener("DOMContentLoaded", function () {
+//   const scrollTransformElement = document.querySelector('.my-svg-item-6');
   
-  window.addEventListener('scroll', function () {
-    const scrollPosition = window.scrollY;
+//   window.addEventListener('scroll', function () {
+//     const scrollPosition = window.scrollY;
     
-    const translateYValue = (1.010 ** scrollPosition) + 'px'; 
+//     const translateYValue = (1.010 ** scrollPosition) + 'px'; 
     
-    scrollTransformElement.style.transform = `translateY(${translateYValue})`;
-  });
-});
+//     scrollTransformElement.style.transform = `translateY(${translateYValue})`;
+//   });
+// });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const scrollTransformElement = document.querySelector('.my-svg-item-8');
+// document.addEventListener("DOMContentLoaded", function () {
+//   const scrollTransformElement = document.querySelector('.my-svg-item-8');
 
-  window.addEventListener('scroll', function () {
-      const scrollPosition = window.scrollY;
+//   window.addEventListener('scroll', function () {
+//       const scrollPosition = window.scrollY;
    
-      const translateYValue = (1.012 ** scrollPosition) + 'px'; 
+//       const translateYValue = (1.012 ** scrollPosition) + 'px'; 
   
-      scrollTransformElement.style.transform = `translateY(${translateYValue})`;
-  });
-});
+//       scrollTransformElement.style.transform = `translateY(${translateYValue})`;
+//   });
+// });
 
 
 
