@@ -700,6 +700,9 @@ textarea:focus{
         margin-right: auto !important;
         margin-top: 24px;
     }
+
+
+
 }
 
 @media (max-width: 576px) {
@@ -707,3 +710,30 @@ textarea:focus{
         font-size: 1rem;
     }
 }
+
+
+@media (max-width: 576px) {
+    .my-big-name {
+        font-size: 4.75rem !important;
+    }
+
+}
+
+@media (max-width: 345px) {
+    .my-big-name {
+        font-size: 4rem !important;
+    }
+
+}
+
+@media (max-width: 297px) {
+    .my-big-name {
+        font-size: 3.5rem !important;
+    }
+
+}
+
+
+
+
+
