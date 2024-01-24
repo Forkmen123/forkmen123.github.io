@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const scrollPosition = window.scrollY;
 
       // const translateXValue = (1.0135) ** scrollPosition + 'px'; 
-      const translateXValue = (1.025) ** scrollPosition + 'px'; 
+      const translateXValue = (1.0135) ** scrollPosition + 'px'; 
       const opacityValue = 1 - (scrollPosition / 2000);
       
       scrollTransformElement.style.transform = `translateX(${translateXValue})`;
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollPosition = window.scrollY;
 
     // const translateYValue = -(1.0045 ** scrollPosition) + 'px'; 
-    const translateYValue = -(1.0107 ** scrollPosition) + 'px'; 
+    const translateYValue = -(1.0090 ** scrollPosition) + 'px'; 
 
     scrollTransformElement.style.transform = `translateY(${translateYValue})`;
   });
@@ -309,6 +309,72 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+// contact form 
 
 
+ // Fonction pour enregistrer les données du formulaire dans le stockage local
+ var formSaved = false; // Variable to track whether the form has been saved
 
+ // Fonction pour enregistrer les données du formulaire dans le stockage local
+ function saveFormData() {
+   // Obtenez les valeurs du formulaire
+   var name = document.getElementById('name').value;
+   var email = document.getElementById('email').value;
+   var message = document.getElementById('message').value;
+
+   // Créez un objet pour stocker les données du formulaire
+   var formData = {
+     name: name,
+     email: email,
+     message: message,
+     // Ajoutez d'autres propriétés au besoin
+   };
+
+   // Convertissez l'objet en une chaîne JSON
+   var formDataJson = JSON.stringify(formData);
+
+   // Enregistrez la chaîne JSON dans le stockage local
+   localStorage.setItem('formData', formDataJson);
+
+   formSaved = true; // Set the flag to indicate that the form has been saved
+ }
+
+ // Fonction pour vérifier si le formulaire a des modifications
+ function checkFormChanges() {
+   // Vérifiez si les données du formulaire ne sont pas vides et si le formulaire n'a pas été enregistré
+   if (localStorage.getItem('formData') && !formSaved) {
+     // Affichez un message de confirmation personnalisé
+     return 'Les modifications que vous avez apportées ne seront peut-être pas enregistrées.';
+   }
+ }
+
+ // Fonction pour soumettre le formulaire
+ function submitForm(event) {
+   // Sauvegardez les données du formulaire si nécessaire
+   saveFormData();
+   
+   // Réinitialisez les données du formulaire
+   localStorage.removeItem('formData');
+
+   // Continuez avec la soumission normale du formulaire
+   // Vous pouvez également rediriger l'utilisateur vers une autre page si nécessaire
+ }
+
+ // Fonction pour charger les données du formulaire depuis le stockage local
+ function loadFormData() {
+   // Obtenez la chaîne JSON depuis le stockage local
+   var formDataJson = localStorage.getItem('formData');
+
+   // S'il y a des données dans le stockage local, analysez-les et remplissez le formulaire
+   if (formDataJson) {
+     var formData = JSON.parse(formDataJson);
+
+     document.getElementById('name').value = formData.name;
+     document.getElementById('email').value = formData.email;
+     document.getElementById('message').value = formData.message;
+     // Définissez d'autres champs du formulaire au besoin
+   }
+ }
+
+ // Appelez loadFormData lorsque la page se charge
+ loadFormData();

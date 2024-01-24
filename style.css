@@ -651,3 +651,59 @@ header {
         scale: 1.1 !important;
     }
 }
+
+
+
+
+
+
+
+/* form style  */
+
+
+input[type=text]:focus{
+    outline: 3px solid #34183025;
+}
+
+input[type=email]:focus{
+    outline: 3px solid #34183025;
+}
+
+
+textarea:focus{
+    outline: 3px solid #34183025 !important;
+}
+
+
+
+
+
+
+@media (min-width: 992px) {
+    .my-contact-text {
+        font-size: 1.25rem;
+    }
+
+  
+
+
+}
+
+
+@media (max-width: 992px) {
+    .my-contact-text {
+        font-size: 1.1rem;
+    }
+
+    .my-contact-carousel {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .my-contact-text {
+        font-size: 1rem;
+    }
+}

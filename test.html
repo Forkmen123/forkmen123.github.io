@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="path/to/bootstrap.min.css" rel="stylesheet">
-  <title>Bootstrap 5 Carousel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message de Confirmation</title>
 </head>
-<body>
+<body onbeforeunload="return checkFormChanges()">
 
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/peintures/projet-3-2.jpg" class="d-block w-100" alt="Slide 1">
-    </div>
-    <div class="carousel-item">
-      <img src="images/peintures/projet-3-2.jpg" class="d-block w-100" alt="Slide 2">
-    </div>
-    <div class="carousel-item">
-      <img src="images/peintures/projet-3-2.jpg" class="d-block w-100" alt="Slide 3">
-    </div>
-  </div>
-</div>
+  <form id="myForm" onsubmit="submitForm(event)">
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="name">
 
-<script src="path/to/popper.min.js"></script>
-<script src="path/to/bootstrap.min.js"></script>
+    <label for="email">E-mail :</label>
+    <input type="email" id="email" name="email">
+
+    <!-- Ajoutez d'autres champs de formulaire au besoin -->
+
+    <button type="button" onclick="saveFormData()">Enregistrer</button>
+    <button type="submit">Soumettre</button>
+  </form>
+
+  <script>
+   
+  </script>
+
 </body>
 </html>
