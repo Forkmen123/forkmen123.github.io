@@ -293,17 +293,17 @@ document.addEventListener("DOMContentLoaded", function () {
 // });
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const scrollTransformElement = document.querySelector('.my-svg-item-8');
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTransformElement = document.querySelector('.my-svg-item-8');
 
-//   window.addEventListener('scroll', function () {
-//       const scrollPosition = window.scrollY;
+  window.addEventListener('scroll', function () {
+      const scrollPosition = window.scrollY;
    
-//       const translateYValue = (1.012 ** scrollPosition) + 'px'; 
+      const translateYValue = (1.012 ** scrollPosition) + 'px'; 
   
-//       scrollTransformElement.style.transform = `translateY(${translateYValue})`;
-//   });
-// });
+      scrollTransformElement.style.transform = `translateY(${translateYValue})`;
+  });
+});
 
 
 
