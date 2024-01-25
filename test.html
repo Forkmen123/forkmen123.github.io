@@ -1,28 +1,69 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Message de Confirmation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .random-image {
+            position: absolute;
+            width: 100px; /* Adjust the size of your image */
+            height: 100px; /* Adjust the size of your image */
+            background-image: url(images/palette-background.png);
+            background-size: cover;
+        }
+    </style>
 </head>
-<body onbeforeunload="return checkFormChanges()">
+<body>
+    <script>
+        // Function to create or retrieve random image data
+        function getRandomImageData(index) {
+            const storedData = JSON.parse(localStorage.getItem(`randomImage_${index}`));
 
-  <form id="myForm" onsubmit="submitForm(event)">
-    <label for="name">Nom :</label>
-    <input type="text" id="name" name="name">
+            if (storedData) {
+                return storedData;
+            } else {
+                const randomX = Math.floor(Math.random() * window.innerWidth);
+                const randomY = Math.floor(Math.random() * window.innerHeight);
+                const randomRotation = Math.floor(Math.random() * 360);
 
-    <label for="email">E-mail :</label>
-    <input type="email" id="email" name="email">
+                const imageData = {
+                    x: randomX,
+                    y: randomY,
+                    rotation: randomRotation
+                };
 
-    <!-- Ajoutez d'autres champs de formulaire au besoin -->
+                localStorage.setItem(`randomImage_${index}`, JSON.stringify(imageData));
 
-    <button type="button" onclick="saveFormData()">Enregistrer</button>
-    <button type="submit">Soumettre</button>
-  </form>
+                return imageData;
+            }
+        }
 
-  <script>
-   
-  </script>
+        // Function to create a random image element
+        function createRandomImage(index) {
+            const imageData = getRandomImageData(index);
 
+            const image = document.createElement('div');
+            image.classList.add('random-image');
+            image.style.left = `${imageData.x}px`;
+            image.style.top = `${imageData.y}px`;
+            image.style.transform = `rotate(${imageData.rotation}deg)`;
+
+            // Optionally, you can set a different background image for each element
+            // image.style.backgroundImage = `url('your-background-image.jpg')`;
+
+            document.body.appendChild(image);
+        }
+
+        // Create a certain number of random images
+        const numberOfImages = 12; // Adjust the number of images
+        for (let i = 0; i < numberOfImages; i++) {
+            createRandomImage(i);
+        }
+    </script>
 </body>
 </html>
