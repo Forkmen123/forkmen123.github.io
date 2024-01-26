@@ -107,7 +107,37 @@ var masonryGrid = new Masonry('#masonry-grid', {
   itemSelector: '.col-12', // Adjust this selector based on your column classes
   columnWidth: '.col-12',
   percentPosition: true
+
+
+  
 });
+});
+
+
+
+$(document).ready(function() {
+  // Use imagesLoaded to detect when images inside the container have loaded
+  imagesLoaded('#masonry-grid', function() {
+    // Initialize Masonry after images have loaded
+    var masonryGrid = new Masonry('#masonry-grid', {
+      itemSelector: '.col-md-6',
+      columnWidth: '.col-md-6',
+      percentPosition: true
+    });
+  });
+});
+
+
+$(document).ready(function() {
+  // Use imagesLoaded to detect when images inside the container have loaded
+  imagesLoaded('#masonry-grid', function() {
+    // Initialize Masonry after images have loaded
+    var masonryGrid = new Masonry('#masonry-grid', {
+      itemSelector: '.col-12',
+      columnWidth: '.col-12',
+      percentPosition: true
+    });
+  });
 });
 
 
