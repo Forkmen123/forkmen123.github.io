@@ -13,6 +13,7 @@ body {
     box-sizing: border-box;
     /* background-image: url(images/palette-background.png);
     background-size: 5%; */
+   
 
 }
 
@@ -747,5 +748,14 @@ textarea:focus{
 
 
 
+
+
+/* card-columns  */
+
+@media screen and (min-width: 925px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
 
 

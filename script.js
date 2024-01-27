@@ -92,8 +92,12 @@
     });
 });
 
+
+
+
+
 // with jQuery
-var $container = $('#container');
+// var $container = $('#container');
 
 // // initialize Masonry after all images have loaded  
 // $container.imagesLoaded( function() {
@@ -120,17 +124,20 @@ var $container = $('#container');
 // });
 
 
-// Include the ImagesLoaded script
-// <script src="path/to/imagesloaded.pkgd.min.js"></script>
+          // var $grid = $('.grid').masonry({
+          //   itemSelector: '.col-md-6',  
+          //   itemSelector: '.col-12',  
 
-// Masonry initialization after all images have loaded
-$('#container').imagesLoaded(function() {
-  var masonryGrid = new Masonry('#masonry-grid', {
-    itemSelector: '.col-md-6', // Adjust this selector based on your column classes
-    columnWidth: '.col-md-6',
-    percentPosition: true
-  });
-});
+          //   columnWidth: '.col-md-6',
+          //   columnWidth: '.col-12',
+          //   percentPosition: true
+          // });
+          // // layout Masonry after each image loads
+          // $grid.imagesLoaded().progress( function() {
+          //   $grid.masonry('layout');
+          // });
+
+
 
 
 
