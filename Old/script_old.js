@@ -1,3 +1,5 @@
+
+
 // one line that does it all
 // $(document).ready(function(){$("img").click(function(){this.requestFullscreen()})});
 
