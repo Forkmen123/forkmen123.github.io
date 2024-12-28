@@ -1,0 +1,31 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F7FEF7;
+    color: #343434;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Shrikhand", serif;
+    color: #FEE66D;
+    font-size: 8rem;
+}
+
+.left-part {
+    background-color: #2F3061;
+}
+
+
+.btn-primary {
+    background-color: #6CA6C1; 
+    border-color: #6CA6C1;   
+    font-style: italic;
+    font-size: 1.89rem;
+}
+
+.btn-primary:hover {
+    background-color: #72b0cd; 
+    border-color: #76b8d7;    
+}
+
+
