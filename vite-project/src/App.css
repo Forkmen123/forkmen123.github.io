@@ -8,7 +8,17 @@ body {
 h1 {
     font-family: "Shrikhand", serif;
     color: #FEE66D;
-    font-size: 8rem;
+    font-size: 8vw;
+}
+
+h2 {
+    font-family: "Shrikhand", serif;
+    color: #2F3061;
+    font-size: 4.98rem;
+}
+
+p {
+    font-size: 1.167rem;
 }
 
 .left-part {
@@ -23,9 +33,9 @@ h1 {
     font-size: 1.89rem;
 }
 
-.btn-primary:hover {
-    background-color: #72b0cd; 
-    border-color: #76b8d7;    
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: #5e9cb9 !important; 
+    border-color: #5e9cb9 !important;    
 }
 
 
