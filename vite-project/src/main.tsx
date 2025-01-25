@@ -4,8 +4,10 @@ import App from './App'
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css'
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
+import { BrowserRouter } from 'react-router-dom'
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  <BrowserRouter>
     <App />
-  </React.StrictMode>,
-)
+  </BrowserRouter>
+);

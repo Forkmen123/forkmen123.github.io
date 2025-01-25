@@ -21,21 +21,145 @@ p {
     font-size: 1.167rem;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    width: 100%;
+}
+
+nav ul {
+    padding: 10px; 
+    border-radius: 30px;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.1);
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 10px;
+}
+
+nav h2 {
+    color: #343434;
+    text-shadow: 0 0 30px 0 rgba(0,0,0,0.1);
+    font-size: 1.5rem;
+}
+
+a {
+    color: #343434;
+    text-decoration: none;
+}
+
+nav ul a.active {
+    color: #2F3061 !important;
+    text-shadow: 0 0 10px #6ca6c150;
+    font-weight: 900 ;
+}
+
 .left-part {
     background-color: #2F3061;
 }
 
 
+/* Button */
+
 .btn-primary {
-    background-color: #6CA6C1; 
-    border-color: #6CA6C1;   
-    font-style: italic;
-    font-size: 1.89rem;
+    background-color: #2F3061; 
+    border-color: #2F3061;  
+    color: #F7FEF7; 
 }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-    background-color: #5e9cb9 !important; 
-    border-color: #5e9cb9 !important;    
+    background-color: #3f4079 !important; 
+    border-color: #3f4079 !important;    
+}
+
+.btn-secondary {
+    background-color: #FEE66D; 
+    border-color: #FEE66D;   
+    color: #2F3061 !important;
+}
+
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus {
+    background-color: #efd558 !important; 
+    border-color: #efd558 !important;    
 }
 
 
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+  
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+  
+/* Slide In from Left */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+  
+.slide-in-left {
+    animation: slideInLeft 0.5s ease-in-out;
+}
+  
+/* Slide In from Right */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+  
+.slide-in-right {
+    animation: slideInRight 0.5s ease-in-out;
+}
+
+
+/* Fade In and Move Down */
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-1vh);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+  
+.fade-in-down {
+    animation: fadeInDown 0.5s ease-in-out;
+}
+
+.my-projects:hover {
+    opacity: 95%;
+    transition-duration: 400ms;
+    transform: scale(0.99);
+}
+
+
+.fa-facebook:hover {
+    opacity: 85%;
+    transition-duration: 100ms;
+}
