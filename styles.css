@@ -1,3 +1,12 @@
+body {
+    background-color: rgb(247, 242, 228) !important;
+    font-family: "Playfair Display", serif !important;
+    font-optical-sizing: auto !important;
+    font-style: normal !important;
+    font-size: 17px !important;
+}
+
+
 .filter-buttons {
     margin-bottom: 2rem;
 }
@@ -47,11 +56,18 @@
 
 @media screen and (min-width: 925px) {
     .card-columns {
-        column-count: 2;
+        column-count: 3;
     }
 }
 
-.custom-img {
-    width: 100%;
-    height: auto;
+.nothing-you-could-do-regular {
+    font-family: "Nothing You Could Do", cursive !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-size: 125px;
+}
+
+
+.my-magenta {
+    color: #341830 !important;
 }

@@ -3,120 +3,156 @@
         "title": "Coucher de Soleil",
         "image": "images/peintures/coucher-de-soleil.jpg",
         "category": "painting",
-        "medium": "Huile sur toile de coton",
+        "sujet": "paysage",
+        "medium": "Huile sur toile",
         "size": "48&quot;x24&quot;",
         "description": "",
         "date": "2024",
-        "archive": "no"
+        "archived": "no",
+        "price": "",
+        "status": "disponible"
     },
     {
         "title": "Le Père en Chandail Soleil",
         "image": "images/peintures/le-père-en-chandail-soleil.jpg",
         "category": "painting",
+        "sujet": "portrait",
         "medium": "Huile sur panneau",
         "size": "9&quot;x12&quot;",
         "description": "Mon père dans son chandail le plus mémorable.",
         "date": "2024",
-        "archive": "no"
+        "archived": "no",
+        "price": "",
+        "status": "indisponible"
     },
     {
          "title": "Gira",
         "image": "images/peintures/gira.jpg",
         "category": "painting",
+        "sujet": "portrait",
         "medium": "Huile sur panneau",
         "size": "9&quot;x12&quot;",
         "description": "Mon père dans son chandail le plus mémorable.",
         "date": "2024",
-        "archive": "no"
+        "archived": "yes",
+        "price": "",
+        "status": "disponible"
     },
     {
         "title": "L'Objectif en Plein Visage",
         "image": "images/peintures/l'objectif-en-plein-visage.jpg",
         "category": "painting",
+        "sujet": "portrait",
         "medium": "Huile sur panneau",
         "size": "9&quot;x12&quot;",
         "description": "Mon père dans son chandail le plus mémorable.",
         "date": "2024",
-        "archive": "no"
+        "archived": "no",
+        "price": "",
+        "status": "indisponible"
     },
     {
         "title": "La Grange Oubliée",
         "image": "images/peintures/la-grange-oubliée.jpg",
         "category": "painting",
+        "sujet": "paysage",
         "medium": "Huile sur panneau",
         "size": "9&quot;x12&quot;",
         "description": "Mon père dans son chandail le plus mémorable.",
         "date": "2024",
-        "archive": "no"
+        "archived": "no",
+        "price": "",
+        "status": "disponible"
     },
     {
         "title": "Le Salon",
         "image": "images/peintures/le-salon.jpg",
         "category": "painting",
+        "sujet": "paysage",
         "medium": "Huile sur panneau",
         "size": "9&quot;x12&quot;",
         "description": "Mon père dans son chandail le plus mémorable.",
         "date": "2024",
-        "archive": "no"
+        "archived": "no",
+        "price": "",
+        "status": "disponible"
     },
     {
         "title": "Tit Singe",
         "image": "images/peintures/tit-singe.jpg",
         "category": "painting",
-        "medium": "Huile sur panneau",
+        "sujet": "nature morte",
+        "medium": "Huile sur toile",
         "size": "9&quot;x12&quot;",
         "description": "Mon père dans son chandail le plus mémorable.",
         "date": "2024",
-        "archive": "no"
+        "archived": "no",
+        "price": "",
+        "status": "indisponible"
     },
     {
         "title": "Ultramarine Blue",
         "image": "images/peintures/ultramarine-blue.jpg",
         "category": "painting",
+        "sujet": "nature morte",
         "medium": "Huile sur panneau",
         "size": "9&quot;x12&quot;",
         "description": "Mon père dans son chandail le plus mémorable.",
         "date": "2024",
-        "archive": "no"
+        "archived": "no",
+        "price": "",
+        "status": "disponible"
     },
     {
         "title": "Un Trio Nature Morte 1/3",
         "image": "images/peintures/un-trio-nature-morte1.jpg",
         "category": "painting",
-        "medium": "Huile sur panneau",
+        "sujet": "nature morte",
+        "medium": "Huile sur toile",
         "size": "9&quot;x12&quot;",
         "description": "Mon père dans son chandail le plus mémorable.",
         "date": "2024",
-        "archive": "no"
+        "archived": "no",
+        "price": "",
+        "status": "indisponible"
     },
     {
         "title": "Un Trio Nature Morte 2/3",
         "image": "images/peintures/un-trio-nature-morte2.jpg",
         "category": "painting",
-        "medium": "Huile sur panneau",
+        "sujet": "nature morte",
+        "medium": "Huile sur toile",
         "size": "9&quot;x12&quot;",
         "description": "Mon père dans son chandail le plus mémorable.",
         "date": "2024",
-        "archive": "no"
+        "archived": "no",
+        "price": "",
+        "status": "indisponible"
     },
     {
         "title": "Un Trio Nature Morte 3/3",
         "image": "images/peintures/un-trio-nature-morte3.jpg",
         "category": "painting",
-        "medium": "Huile sur panneau",
+        "sujet": "nature morte",
+        "medium": "Huile sur toile",
         "size": "9&quot;x12&quot;",
         "description": "Mon père dans son chandail le plus mémorable.",
         "date": "2024",
-        "archive": "no"
+        "archived": "yes",
+        "price": "",
+        "status": "indisponible"
     },
     {
         "title": "Champs Inapprochables",
         "image": "images/peintures/champs-inapprochables.jpg",
         "category": "painting",
+        "sujet": "paysage",
         "medium": "Huile sur panneau",
         "size": "9&quot;x12&quot;",
         "description": "Mon père dans son chandail le plus mémorable.",
         "date": "2024",
-        "archive": "no"
+        "archived": "no",
+        "price": "",
+        "status": "disponible"
     }
 ]

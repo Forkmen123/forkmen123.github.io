@@ -19,9 +19,8 @@ function renderGallery(items) {
         div.className = `gallery-item ${item.category}`;
         div.innerHTML = `
            <a href="${item.image}" data-lightbox="gallery" data-title="<strong>${item.title}</strong><br>${item.description || ''}">
-            <img src="${item.image}" alt="${item.title}">
-                 </a>
-                 <p class="caption">${item.title}</p>
+            <img src="${item.image}" class="card mb-4" alt="${item.title}">
+            </a>
     `;
         gallery.appendChild(div);
     });
