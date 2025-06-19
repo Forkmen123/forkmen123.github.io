@@ -1,32 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Art Gallery</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-  <link href="lightbox2-2.11.4/dist/css/lightbox.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="lightbox2-2.11.4/dist/css/lightbox.min.css" rel="stylesheet" />
+
+
+    <title>Tommy Roy - Site de Projets</title>
+
+    <meta name="description"
+        content="Salut ! Voici mon site internet où se retrouvent principalement mes peintures à l’huile. Les sujets que je peins varient des natures mortes, des paysages aux portraits.">
+
+    <link rel="icon" href="images/favicon.png">
 
 </head>
-<body>
+
+<body class="m-0">
 
 
 
-  <div class="filter-buttons">
-    <button data-filter="all" class="active">All</button>
-    <button data-filter="painting">Painting</button>
-    <button data-filter="drawing">Drawing</button>
-    <button data-filter="sculpture">Sculpture</button>
-  </div>
+    <!-- navbar -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MySite</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
 
-  <div class="gallery" id="gallery" >
-    <!-- Items will be inserted here -->
-  </div>
 
-  <script src="script.js"></script>
-  <script src="lightbox2-2.11.4/dist/js/lightbox-plus-jquery.min.js"></script>
- 
+    <!-- Hero Section -->
+    <!-- <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>Welcome to My Website</h1>
+            <p class="lead">This is a simple site made with Bootstrap 5</p>
+        </div>
+    </header> -->
+
+    <div class="row m-5 p-5">Tommy Roy</div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2"><img class="img-fluid" src="images/autre/moi-jaune-1mb.jpg"
+                alt="photographie de Tommy Roy avec une casquette"></div>
+        <div class="col-4 text-start">Voici mon site internet, où je partage principalement mes peintures à l'huile. Vous y
+            découvrirez une variété de sujets, allant des natures mortes aux paysages en passant par les portraits.
+        </div>
+        <div class="col"></div>
+    </div>
+
+
+
+    <div class="filter-buttons">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="painting">Painting</button>
+        <button data-filter="drawing">Drawing</button>
+        <button data-filter="sculpture">Sculpture</button>
+    </div>
+
+    <div class="gallery" id="gallery">
+        <!-- Items will be inserted here -->
+    </div>
+    </div>
+
+    <!-- Content Section -->
+    <!-- <section class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h3>Feature One</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Feature Two</h3>
+                    <p>Praesentium pariatur quibusdam accusamus minus.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Feature Three</h3>
+                    <p>Eveniet tempora mollitia molestiae.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- footer -->
+    <!-- <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">© 2025 MySite. All rights reserved.</p>
+    </footer> -->
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lightbox2-2.11.4/dist/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+
 
 </body>
+
 </html>
