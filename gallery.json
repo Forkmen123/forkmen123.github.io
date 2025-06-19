@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Painting 1",
+        "category": "painting",
+        "image": "images/projet-1.jpg"
+    },
+    {
+        "title": "Drawing 2",
+        "category": "drawing",
+        "image": "images/projet-2.jpg"
+    },
+    {
+        "title": "Sculpture 3",
+        "category": "sculpture",
+        "image": "images/projet-3.jpg"
+    },
+    {
+        "title": "Painting 2",
+        "category": "painting",
+        "image": "images/projet-4.jpg"
+    },
+    {
+        "title": "Painting 2",
+        "category": "painting",
+        "image": "images/projet-5.jpg"
+    },
+    {
+        "title": "Painting 2",
+        "category": "painting",
+        "image": "images/projet-6.jpg"
+    }
+]
