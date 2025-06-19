@@ -29,9 +29,29 @@
     transition: transform 0.3s ease;
 }
 
+.gallery-item img:hover {
+    opacity: 95%;
+    transition-duration: 400ms;
+    transform: scale(0.99);
+}
+
 .gallery-item img {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+
+
+/* card-columns  */
+
+@media screen and (min-width: 925px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+.custom-img {
+    width: 100%;
+    height: auto;
+}
