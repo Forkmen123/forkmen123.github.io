@@ -6,6 +6,52 @@ body {
     font-size: 17px !important;
 }
 
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px) rotate(-10deg);
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+
+.links-mauve {
+    color: #341830 !important;
+    font-style: italic !important;
+}
+
+.links-white {
+    color: rgb(247, 242, 228) !important;
+    font-style: normal !important;
+    text-decoration: none !important;
+}
+
+
+a:hover {
+  cursor: pointer !important; 
+}
+
+
+i {
+    color: #341830 !important;
+}
+
 
 .filter-buttons {
     margin-bottom: 2rem;
@@ -13,7 +59,7 @@ body {
 
 .filter-buttons button {
     background: #eee;
-    border: none;
+    border: 2px #341830;
     padding: 0.5rem 1rem;
     margin: 0 5px;
     border-radius: 5px;
@@ -23,7 +69,7 @@ body {
 
 .filter-buttons button:hover,
 .filter-buttons button.active {
-    background: #333;
+    background: #341830;
     color: white;
 }
 
@@ -60,14 +106,207 @@ body {
     }
 }
 
-.nothing-you-could-do-regular {
-    font-family: "Nothing You Could Do", cursive !important;
+.praise-font {
+    font-family: "Praise" !important;
     font-weight: 400 !important;
     font-style: normal !important;
-    font-size: 125px;
+
 }
 
 
 .my-magenta {
     color: #341830 !important;
+}
+
+
+.my-chevron-123 {
+    bottom: 4% !important;
+    font-size: 50px !important;
+}
+
+
+
+
+
+
+
+
+
+
+/* navigation chevrons */
+
+.fa-chevron-right {
+    color: #aa736e;
+    text-shadow: 0 0 1px #aa736e;
+    margin-top: 15.625rem;
+}
+
+.fa-chevron-left {
+    color: #aa736e;
+    text-shadow: 0 0 1px #aa736e;
+    margin-top: 15.625rem;
+}
+
+
+.fa-chevron-right:hover {
+    color: #c99792;
+    transition-duration: 250ms;
+}
+
+.fa-chevron-left:hover {
+    color: #c99792;
+    transition-duration: 250ms;
+}
+
+
+
+@media (max-width: 438px) {
+
+    .fa-chevron-right {
+        margin-top: 10.625rem;
+    }
+
+    .fa-chevron-left {
+        margin-top: 10.625rem;
+    }
+
+}
+
+
+.my-chevron-animation {
+    animation: chevron 1s ease-in-out infinite alternate;
+}
+
+@keyframes chevron {
+    from {
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+
+/* button2 */
+.button2 {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.button2 {
+    --primary-color: #341830;
+    --hovered-color: #4a2344;
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 20px;
+}
+
+.button2 p {
+    margin: 0;
+    position: relative;
+    color: #341830;
+}
+
+.button2::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: #4a2344;
+    height: 2px;
+    transition: 0.3s ease-out;
+}
+
+.button2 p::before {
+    position: absolute;
+    /*   box-sizing: border-box; */
+    width: 0%;
+    inset: 0;
+    color: #4a2344;
+    overflow: hidden;
+    transition: 0.3s ease-out;
+}
+
+.button2:hover::after {
+    width: 100%;
+}
+
+.button2:hover p::before {
+    width: 100%;
+}
+
+.button2:hover svg {
+    transform: translateX(4px);
+    color: #4a2344;
+}
+
+.button2 svg {
+    color: #341830;
+    transition: 0.2s;
+    position: relative;
+    width: 15px;
+    transition-delay: 0.2s;
+}
+
+
+
+.btn-primary {
+    background-color: #341830 !important;
+    padding: 0.8rem 1.4rem !important;
+    border-color: #341830 !important;
+    font-size: 20px !important;
+    border-radius: 30px !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #4a2344 !important;
+    border-color: #4a2344 !important;
+}
+
+
+
+/* status dot */
+
+.status-dot {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid white;
+    z-index: 2;
+}
+
+.dot-green {
+    background-color: #28a745;
+}
+
+.dot-red {
+    background-color: #dc3545;
+}
+
+
+.opacity-links {
+    opacity: 1;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.opacity-links:hover {
+    opacity: 0.6;
+    transition: opacity 0s steps(1, start) !important;
 }
