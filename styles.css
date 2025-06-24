@@ -360,3 +360,6 @@ input:checked + .slider:before {
 }
 
 
+.texte {
+    font-size: 18px !important;
+}
