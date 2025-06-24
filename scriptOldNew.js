@@ -10,7 +10,6 @@ const state = {
     allItems: [],
     currentFilter: 'all',
     currentSort: CONFIG.defaultSort,
-    showArchived: false, // Toggle pour afficher les projets archivés
     filters: {
         size: 'all',
         status: 'all',
@@ -187,16 +186,15 @@ function renderGallery(items) {
 function getFilteredItems() {
     let items = [...state.allItems]; // Clone pour éviter les mutations
     
-    // Filtre principal : archivés ou non archivés (via la toggle)
-    if (state.showArchived) {
+    // Filtre principal (catégorie/archivés)
+    if (state.currentFilter === 'all') {
+        items = items.filter(item => !item.archived);
+    } else if (state.currentFilter === 'archived') {
         items = items.filter(item => item.archived);
     } else {
-        items = items.filter(item => !item.archived);
-    }
-    
-    // Si on affiche les projets non archivés, on peut appliquer le filtre de catégorie
-    if (!state.showArchived && state.currentFilter !== 'all') {
-        items = items.filter(item => item.category === state.currentFilter);
+        items = items.filter(item => 
+            item.category === state.currentFilter && !item.archived
+        );
     }
     
     // Application des filtres additionnels
@@ -253,10 +251,7 @@ function setupEventListeners() {
     });
     
     // Toggle archivés
-    elements.archivedToggle?.addEventListener('change', (e) => {
-        state.showArchived = e.target.checked;
-        updateGallery();
-    });
+    elements.archivedToggle?.addEventListener('change', updateGallery);
 }
 
 // Gestionnaires d'événements
@@ -265,18 +260,14 @@ function handleCategoryFilter(e) {
     elements.buttons.forEach(b => b.classList.remove('active'));
     e.target.classList.add('active');
     
-    // Mise à jour de l'état (sauf si c'est le filtre "archived" qui est maintenant géré par la toggle)
-    const filterValue = e.target.getAttribute('data-filter');
-    if (filterValue !== 'archived') {
-        state.currentFilter = filterValue;
-    }
+    // Mise à jour de l'état
+    state.currentFilter = e.target.getAttribute('data-filter');
     updateGallery();
 }
 
 function resetFilters() {
     // Réinitialisation de l'état
     state.currentFilter = 'all';
-    state.showArchived = false;
     state.filters = {
         size: 'all',
         status: 'all',
@@ -289,11 +280,6 @@ function resetFilters() {
     Object.values(elements.filterSelects).forEach(select => {
         if (select) select.value = 'all';
     });
-    
-    // Réinitialisation de la toggle archivés
-    if (elements.archivedToggle) {
-        elements.archivedToggle.checked = false;
-    }
     
     // Réinitialisation des boutons
     elements.buttons.forEach(b => b.classList.remove('active'));

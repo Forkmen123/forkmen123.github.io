@@ -32,7 +32,8 @@
     <!-- navbar -->
     <nav class="my-nav navbar navbar-expand-lg mt-2 sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><i class="fa-solid fa-house-chimney my-magenta"></i></a>
+            <a class="navbar-brand" href="index.html"><i class="fa-solid fa-house-chimney my-magenta"
+                    style="scale: 1.5;"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -65,19 +66,23 @@
     </nav>
 
     <div class="container p-5">
-        
 
-        <button id="reset-filters">Réinitialiser</button>
+        <div class="row praise-font text-center d-flex justify-content-center fade-in"
+            style="color: #341830; font-size: 125px;">
+            Mes Projets</div>
+
+        <div class="" id="reset-filters" style="cursor: pointer !important;">
+            <i class="fa-solid fa-arrows-rotate"></i>Réinitialiser
+        </div>
 
 
 
         <div class="additional-filters p-3">
-            <label for="filter-size">Taille :</label>
-            <select id="filter-size">
+            <label for="filter-category">Taille :</label>
+            <select id="filter-category">
                 <option value="all" selected>Toutes</option>
-                <option value="painting">16"x12"</option>
-                <option value="drawing">16"x12"</option>
-                
+                <option value="painting">Peintures</option>
+                <option value="drawing">Dessins</option>
             </select>
 
             <label for="filter-size">Taille :</label>
@@ -99,11 +104,12 @@
                 <option value="indisponible">Indisponible</option>
             </select>
 
-            <label for="filter-subject">Sujet :</label>
-            <select id="filter-subject">
+            <label for="filter-sujet">Sujet :</label>
+            <select id="filter-sujet">
                 <option value="all" selected>Tous</option>
                 <option value="paysage">Paysage</option>
                 <option value="portrait">Portrait</option>
+                <option value="nature morte">Nature morte</option>
                 <!-- autres sujets -->
             </select>
 
@@ -117,7 +123,18 @@
             </select>
         </div>
 
-        <a data-filter="archived" class="text-black fst-italic">voir les projets archivés</a>
+
+
+
+
+
+  
+            <label class="toggle-switch" id="archived-toggle">
+                <input type="checkbox" >
+                <span class="slider"></span>
+            </label>
+            <div class="ml-3">Afficher les projets archivés seulement</div>
+        
 
         <div class="card-columns p-5" id="gallery">
             <!-- Items will be inserted here -->
@@ -129,7 +146,8 @@
 
 
 
-
+ <div class="container mb-5" style="height: 5vh;"><img src="images/svg/line-deco.png" alt="" class="img-fluid"
+            style="scale: 0.5;" id="section1"></div>
 
 
 

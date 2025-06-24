@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(247, 242, 228) !important;
+    background-color: #F7F2E4 !important;
     font-family: "Playfair Display", serif !important;
     font-optical-sizing: auto !important;
     font-style: normal !important;
@@ -44,7 +44,7 @@ body {
 
 
 a:hover {
-  cursor: pointer !important; 
+    cursor: pointer !important;
 }
 
 
@@ -310,3 +310,53 @@ i {
     opacity: 0.6;
     transition: opacity 0s steps(1, start) !important;
 }
+
+
+/* Toggle Switch Stylé */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+input:checked + .slider {
+    background-color: #341830;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
