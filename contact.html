@@ -33,8 +33,12 @@
     <!-- navbar -->
     <nav class="my-nav navbar navbar-expand-lg mt-2 sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><i class="fa-solid fa-house-chimney my-magenta"
-                    style="scale: 1.5;"></i></a>
+            <!-- <a class="navbar-brand fs-2 praise-font" href="index.html" style="color: #341830;">Tommy Roy</a> -->
+            <a class="nav-link my-magenta opacity-links links-mauve" href="index.html">
+                <div class="button2">
+                    <p>Acceuil</p>
+                </div>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -82,32 +86,42 @@
                 <p class="texte">
                     Je m'appelle Tommy Roy. Il me fera plaisir d'échanger avec vous au sujet de la faisabilité d'un
                     projet, de la disponibilité d'une œuvre ou pour toute autre question. Il vous suffit simplement de
-                    remplir ce <a href="#myForm" style="color: #341830;  font-style: italic;">formulaire</a> afin de me
-                    contacter.
+                    remplir ce <a href="#myForm" style="color: #341830;  font-style: italic;" class="opacity-links">formulaire</a> afin de me
+                    contacter par courriel ou sur les différents réseaux sociaux.
                 </p>
 
                 <div class="mt-5 d-lg-block d-flex justify-content-end justify-content-lg-start">
-                    <a href="#myForm"><button class="btn btn-primary shadow"
-                            style="font-size: 1.2rem; ">Contacter</button></a>
+                    <!-- <a href="#myForm"><button class="btn btn-primary shadow fst-italic">Contacter</button></a> -->
+                    
+                    <a href="https://www.instagram.com/tommyroyart/" target="_blank" class="text-dark me-4 opacity-links">
+                        <i class="fab fa-instagram fa-lg" style="scale: 1.5;"></i>
+                    </a>
+                    <a href="https://www.facebook.com/tommy.roy.1004/" target="_blank" class="text-dark me-4 opacity-links">
+                        <i class="fab fa-facebook fa-lg" style="scale: 1.5;"></i>
+                    </a>
+                    <a href="#section1" class="text-dark opacity-links ">
+                        <i class="fas fa-envelope fa-lg" style="scale: 1.5;"></i>
+                    </a>
                 </div>
             </div>
 
 
 
 
-            <div id="carouselExampleIndicators" class="carousel slide col-lg-4 col-md-7 d-flex my-contact-carousel"
-                data-bs-ride="carousel" data-bs-touch="true">
+            <div id="carouselExampleIndicators"
+                class="carousel slide col-lg-4 col-md-7 d-flex my-contact-carousel fade-in" data-bs-ride="carousel"
+                data-bs-touch="true" style="rotate: 2deg;">
 
 
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="images/autre/photo-1-carré.jpg" class="img-fluid shadow rounded-5"
-                            data-bs-interval="400" alt="Photographie de Tommy Roy qui peins en plein air.">
+                        <img src="images/autre/photo-1-carré.jpg" class="img-fluid rounded shadow-sm"
+                            data-bs-interval="400" alt="Photographie de Tommy Roy qui peins en plein air." >
                     </div>
-                    <div class="carousel-item">
+                    <!-- <div class="carousel-item">
                         <img src="images/autre/photo-2-carré.jpg" class="img-fluid shadow rounded-5"
                             data-bs-interval="400" alt="Photographie de Tommy Roy qui peins en plein air.">
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -125,8 +139,73 @@
         </div>
     </div>
 
- <div class="container mb-5" style="height: 5vh;"><img src="images/svg/line-deco.png" alt="" class="img-fluid"
-            style="scale: 0.5;" id="section1"></div>
+    <div class="container mb-5" style="height: 5vh;" id="section1"><img src="images/svg/line-deco.png" alt="" class="img-fluid"
+            style="scale: 0.25;"></div>
+
+
+
+    <!-- contact form  -->
+
+    <div class="container">
+        <div class="row praise-font text-center d-flex justify-content-center fade-in"
+            style="color: #341830; font-size: 75px;">
+            Envoyer un message</div>
+        <form id="myForm" onsubmit="submitForm(event)" method="post"
+            action="https://forms.un-static.com/forms/980fdef8bd25a4bf9a0c14e4492358d4517bd25c" class="px-5 mx-5">
+            <div class="mx-5 px-5">
+                <!-- Nom -->
+                <div class="mb-4 row">
+                    <label for="name" class="form-label fs-4 text-dark">Nom</label>
+                    <div class="col-sm-6 col-md-4">
+                        <input type="text" class="form-control shadow" id="name" name="name" placeholder="Nom complet"
+                            required>
+                    </div>
+                </div>
+                <!-- Adresse courriel -->
+                <div class="mb-4 row">
+                    <label for="email" class="form-label fs-4 text-dark">Adresse courriel</label>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="input-group shadow">
+                            <span class="input-group-text bg-light"><i class="fa fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Adresse courriel" required>
+                        </div>
+                    </div>
+                </div>
+                <!-- Message -->
+                <div class="mb-4 row">
+                    <label for="message" class="form-label fs-4 text-dark">Message</label>
+                    <div class="col-12 col-lg-10 col-xl-8">
+                        <textarea name="message" id="message" class="form-control shadow p-3" rows="6" placeholder="..."
+                            required></textarea>
+                    </div>
+                </div>
+
+
+                <div class="row align-items-center mt-4">
+                    <!-- ✅ Case à cocher -->
+                    <!-- <div class="col-md-6 col-xl-4 mb-3 mb-md-0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="subscribe" name="subscribe" checked>
+                            <label class="form-check-label" for="subscribe">
+                                Reçevoir des courriels promotionnels
+                            </label>
+                        </div>
+                    </div> -->
+
+                    <!-- ✅ Bouton d'envoi -->
+                    <div class="col-md-6 col-xl-4 d-flex justify-content-md-start">
+
+                        <div class="d-flex mt-5 justify-content-between">
+                            <button type="submit" class="btn btn-primary shadow fst-italic">Envoyer</button>
+
+                        </div>
+                    </div>
+                    <!-- Social icons -->
+
+                </div>
+        </form>
+    </div>
 
 
     <!-- footer -->
@@ -167,10 +246,10 @@
 
             <!-- Social icons -->
             <div>
-                <a href="https://www.instagram.com" target="_blank" class="text-dark me-4 opacity-links">
+                <a href="https://www.instagram.com/tommyroyart/" target="_blank" class="text-dark me-4 opacity-links">
                     <i class="fab fa-instagram fa-lg" style="scale: 1.5;"></i>
                 </a>
-                <a href="https://www.facebook.com" target="_blank" class="text-dark me-4 opacity-links">
+                <a href="https://www.facebook.com/tommy.roy.1004/" target="_blank" class="text-dark me-4 opacity-links">
                     <i class="fab fa-facebook fa-lg" style="scale: 1.5;"></i>
                 </a>
                 <a href="contact.html" class="text-dark opacity-links">

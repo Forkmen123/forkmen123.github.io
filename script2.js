@@ -151,21 +151,21 @@ function createGalleryItem(item) {
     const descriptionText = safeDescriptionAttr ? `&#8212; <em>${safeDescriptionAttr}</em>` : '';
 
     div.innerHTML = `
-        <div class="position-relative">
-            <a href="${item.image}" 
-               data-lightbox="gallery" 
-               data-title="<strong>${safeTitleAttr}</strong> <em>${descriptionText}</em><small> &#8212; ${safeSizeAttr} &#8212; ${year}<br> ${safePriceAttr}</small><strong> ${safeStatusAttr}</strong>"
-               aria-label="Voir ${safeTitle}">
-                <img src="${item.image}" 
-                     class="card mb-4 fade-in" 
-                     alt="${safeTitle}"
-                     loading="lazy">
-                <span class="status-dot ${statusClass}" aria-hidden="true"></span>
-            </a>
-        </div>
-    `;
+    <div class="position-relative">
+        <a href="${item.image}" 
+           data-lightbox="gallery" 
+           data-title="<strong>${safeTitleAttr}</strong> <em>${descriptionText}</em><small> &#8212; ${safeSizeAttr} &#8212; ${year}<br> ${safePriceAttr}</small><strong> ${safeStatusAttr}</strong>"
+           aria-label="Voir ${safeTitle}">
+            <img src="${item.thumbnail ? item.thumbnail : item.image}" 
+                 class="card mb-4 fade-in" 
+                 alt="${safeTitle}"
+                 loading="lazy">
+            <span class="status-dot ${statusClass}" aria-hidden="true"></span>
+        </a>
+    </div>
+`;
 
-    return div;
+
 }
 
 // Rendu de la galerie
@@ -329,27 +329,27 @@ filtersCollapse.addEventListener('hide.bs.collapse', function () {
 
 
 // Animation du bouton reset au clic
-document.getElementById('reset-filters').addEventListener('click', function() {
+document.getElementById('reset-filters').addEventListener('click', function () {
     const resetIcon = document.getElementById('reset-icon');
-    
+
     // Animation de rotation
     resetIcon.style.transform = 'rotate(360deg)';
     resetIcon.style.transition = 'transform 0.5s ease';
-    
+
     // Réinitialiser tous les selects
     document.querySelectorAll('select').forEach(select => {
         select.selectedIndex = 0;
     });
-    
+
     // Réinitialiser le toggle
     document.getElementById('archived-toggle').checked = false;
-    
+
     // Remettre l'icône à sa position initiale après l'animation
     setTimeout(() => {
         resetIcon.style.transform = 'rotate(0deg)';
         resetIcon.style.transition = 'none';
     }, 500);
-    
+
     console.log('Filtres réinitialisés');
 });
 

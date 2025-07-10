@@ -58,33 +58,33 @@ function cacheElements() {
 // Effets de défilement optimisés avec throttling
 function setupScrollEffects() {
     let ticking = false;
-    
+
     const navElement = document.querySelector('.my-nav');
     const chevronElement = document.querySelector('.my-chevron-opacity-header');
-    
+
     function updateScrollEffects() {
         const scrollPosition = window.scrollY;
-        
+
         if (navElement) {
             const navOpacity = Math.max(0, 1 - (scrollPosition / CONFIG.navOpacityThreshold));
             navElement.style.opacity = navOpacity;
         }
-        
+
         if (chevronElement) {
             const chevronOpacity = Math.max(0, 1 - (scrollPosition / CONFIG.chevronOpacityThreshold));
             chevronElement.style.opacity = chevronOpacity;
         }
-        
+
         ticking = false;
     }
-    
+
     function requestScrollUpdate() {
         if (!ticking) {
             requestAnimationFrame(updateScrollEffects);
             ticking = true;
         }
     }
-    
+
     window.addEventListener('scroll', requestScrollUpdate, { passive: true });
 }
 
@@ -93,7 +93,7 @@ async function loadGalleryData() {
     try {
         const response = await fetch('gallery.json');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        
+
         const data = await response.json();
         state.allItems = data;
         updateGallery();
@@ -133,52 +133,53 @@ function escapeAttribute(str) {
 function createGalleryItem(item) {
     const div = document.createElement('div');
     div.className = `gallery-item ${item.category}`;
-    
+
     const year = item.date ? new Date(item.date).getFullYear() : '';
     const safeTitle = escapeHtml(item.title || '');
     const safeDescription = escapeHtml(item.description || '');
     const safePrice = escapeHtml(item.price || '');
     const safeStatus = escapeHtml(item.status || '');
-    
+
     // Échappement spécial pour les attributs HTML (notamment data-title)
     const safeTitleAttr = escapeAttribute(item.title || '');
     const safeDescriptionAttr = escapeAttribute(item.description || '');
     const safeSizeAttr = escapeAttribute(item.size || '');
     const safePriceAttr = escapeAttribute(item.price || '');
     const safeStatusAttr = escapeAttribute(item.status || '');
-    
+
     const statusClass = item.status === 'disponible' ? 'dot-green' : 'dot-red';
     const descriptionText = safeDescriptionAttr ? `&#8212; <em>${safeDescriptionAttr}</em>` : '';
-    
+
     div.innerHTML = `
+
         <div class="position-relative">
             <a href="${item.image}" 
                data-lightbox="gallery" 
                data-title="<strong>${safeTitleAttr}</strong> <em>${descriptionText}</em><small> &#8212; ${safeSizeAttr} &#8212; ${year}<br> ${safePriceAttr}</small><strong> ${safeStatusAttr}</strong>"
                aria-label="Voir ${safeTitle}">
-                <img src="${item.image}" 
-                     class="card mb-4" 
+                <img src="${item.thumbnail || item.image}" 
+                     class="card mb-4 fade-in" 
                      alt="${safeTitle}"
                      loading="lazy">
                 <span class="status-dot ${statusClass}" aria-hidden="true"></span>
             </a>
         </div>
     `;
-    
-    return div;
+
+    return div; 
 }
 
 // Rendu de la galerie
 function renderGallery(items) {
     if (!elements.gallery) return;
-    
+
     // Utilisation d'un fragment pour améliorer les performances
     const fragment = document.createDocumentFragment();
-    
+
     items.forEach(item => {
         fragment.appendChild(createGalleryItem(item));
     });
-    
+
     elements.gallery.innerHTML = '';
     elements.gallery.appendChild(fragment);
 }
@@ -186,26 +187,26 @@ function renderGallery(items) {
 // Logique de filtrage
 function getFilteredItems() {
     let items = [...state.allItems]; // Clone pour éviter les mutations
-    
+
     // Filtre principal : archivés ou non archivés (via la toggle)
     if (state.showArchived) {
         items = items.filter(item => item.archived);
     } else {
         items = items.filter(item => !item.archived);
     }
-    
+
     // Si on affiche les projets non archivés, on peut appliquer le filtre de catégorie
     if (!state.showArchived && state.currentFilter !== 'all') {
         items = items.filter(item => item.category === state.currentFilter);
     }
-    
+
     // Application des filtres additionnels
     Object.entries(state.filters).forEach(([key, value]) => {
         if (value !== 'all') {
             items = items.filter(item => item[key] === value);
         }
     });
-    
+
     return items;
 }
 
@@ -214,7 +215,7 @@ function sortItems(items) {
     return items.sort((a, b) => {
         const dateA = new Date(a.date);
         const dateB = new Date(b.date);
-        
+
         return state.currentSort === 'desc' ? dateB - dateA : dateA - dateB;
     });
 }
@@ -232,7 +233,7 @@ function setupEventListeners() {
     elements.buttons?.forEach(btn => {
         btn.addEventListener('click', handleCategoryFilter);
     });
-    
+
     // Filtres additionnels
     Object.entries(elements.filterSelects).forEach(([key, select]) => {
         if (select) {
@@ -242,16 +243,16 @@ function setupEventListeners() {
             });
         }
     });
-    
+
     // Bouton de réinitialisation
     elements.resetButton?.addEventListener('click', resetFilters);
-    
+
     // Tri
     elements.sortSelect?.addEventListener('change', (e) => {
         state.currentSort = e.target.value;
         updateGallery();
     });
-    
+
     // Toggle archivés
     elements.archivedToggle?.addEventListener('change', (e) => {
         state.showArchived = e.target.checked;
@@ -264,7 +265,7 @@ function handleCategoryFilter(e) {
     // Mise à jour de l'état visuel
     elements.buttons.forEach(b => b.classList.remove('active'));
     e.target.classList.add('active');
-    
+
     // Mise à jour de l'état (sauf si c'est le filtre "archived" qui est maintenant géré par la toggle)
     const filterValue = e.target.getAttribute('data-filter');
     if (filterValue !== 'archived') {
@@ -284,20 +285,20 @@ function resetFilters() {
         medium: 'all',
         category: 'all'
     };
-    
+
     // Réinitialisation des sélecteurs
     Object.values(elements.filterSelects).forEach(select => {
         if (select) select.value = 'all';
     });
-    
+
     // Réinitialisation de la toggle archivés
     if (elements.archivedToggle) {
         elements.archivedToggle.checked = false;
     }
-    
+
     // Réinitialisation des boutons
     elements.buttons.forEach(b => b.classList.remove('active'));
-    
+
     // Mise à jour de l'affichage
     updateGallery();
 }
@@ -308,3 +309,50 @@ window.GalleryApp = {
     resetFilters,
     state: () => ({ ...state }) // Lecture seule de l'état
 };
+
+
+
+
+
+// Gestion du toggle des filtres avec rotation du chevron
+const filtersCollapse = document.getElementById('filtersCollapse');
+const chevronIcon = document.getElementById('chevron-icon');
+
+filtersCollapse.addEventListener('show.bs.collapse', function () {
+    chevronIcon.style.transform = 'rotate(180deg)';
+    chevronIcon.style.transition = 'transform 0.3s ease';
+});
+
+filtersCollapse.addEventListener('hide.bs.collapse', function () {
+    chevronIcon.style.transform = 'rotate(0deg)';
+    chevronIcon.style.transition = 'transform 0.3s ease';
+});
+
+
+// Animation du bouton reset au clic
+document.getElementById('reset-filters').addEventListener('click', function () {
+    const resetIcon = document.getElementById('reset-icon');
+
+    // Animation de rotation
+    resetIcon.style.transform = 'rotate(360deg)';
+    resetIcon.style.transition = 'transform 0.5s ease';
+
+    // Réinitialiser tous les selects
+    document.querySelectorAll('select').forEach(select => {
+        select.selectedIndex = 0;
+    });
+
+    // Réinitialiser le toggle
+    document.getElementById('archived-toggle').checked = false;
+
+    // Remettre l'icône à sa position initiale après l'animation
+    setTimeout(() => {
+        resetIcon.style.transform = 'rotate(0deg)';
+        resetIcon.style.transition = 'none';
+    }, 500);
+
+    console.log('Filtres réinitialisés');
+});
+
+
+

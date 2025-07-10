@@ -32,8 +32,12 @@
     <!-- navbar -->
     <nav class="my-nav navbar navbar-expand-lg mt-2 sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><i class="fa-solid fa-house-chimney my-magenta"
-                    style="scale: 1.5;"></i></a>
+            <!-- <a class="navbar-brand fs-2 praise-font" href="index.html" style="color: #341830;">Tommy Roy</a> -->
+            <a class="nav-link my-magenta opacity-links links-mauve" href="index.html">
+                <div class="button2">
+                    <p>Acceuil</p>
+                </div>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -70,8 +74,25 @@
         <div class="row praise-font text-center d-flex justify-content-center fade-in"
             style="color: #341830; font-size: 125px;">
             Mes Projets</div>
+        <div class="container px-5 mx-5" style="height: 20vh;">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-7">
+                    <p class="texte">Voici une galerie numérique rescensnat mes meilleurs projets créatifs. Les points
+                        de couleurs rouges ou vers vous informe de la disponibilité de ces derniers. Pour une commande
+                        de peinture personnalisée ou pour l'éventuel achat d'un projet, <a href="contact.html"
+                            class="text-dark fst-italic opacity-links" style="color: #341830 !important;">cliquez
+                            ici</a>.</p>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
 
-        <div class="" id="reset-filters" style="cursor: pointer !important;">
+
+        <div class="container mb-5" style="height: 5vh;"><img src="images/svg/line-deco.png" alt="" class="img-fluid"
+                style="scale: 0.25;" id="section1"></div>
+
+        <!-- <div class="" id="reset-filters" style="cursor: pointer !important;">
             <i class="fa-solid fa-arrows-rotate"></i>Réinitialiser
         </div>
 
@@ -94,7 +115,6 @@
                 <option value='9"x8"'>9"x8"</option>
                 <option value='24"x18"'>24"x18"</option>
                 <option value='48"x24"'>48"x24"</option>
-                <!-- ajoute les tailles nécessaires -->
             </select>
 
             <label for="filter-status">Disponibilité :</label>
@@ -110,7 +130,6 @@
                 <option value="paysage">Paysage</option>
                 <option value="portrait">Portrait</option>
                 <option value="nature morte">Nature morte</option>
-                <!-- autres sujets -->
             </select>
 
             <label for="filter-medium">Support :</label>
@@ -119,22 +138,93 @@
                 <option value="Huile sur panneau">Panneau</option>
                 <option value="Huile sur toile">Toile</option>
                 <option value="Papier">Papier</option>
-                <!-- autres médiums -->
             </select>
         </div>
 
 
+        <label class="toggle-switch" id="archived-toggle">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+        <div class="ml-3">Afficher les projets archivés seulement</div> -->
+
+        <div class="container-fluid p-3">
+            <div class="border rounded p-3" style="background-color: #ebe9e0;">
+                <!-- En-tête avec boutons filtres et reset -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
+                        data-bs-target="#filtersCollapse" aria-expanded="false" id="toggle-filters">
+                        <i class="fa-solid fa-chevron-down me-2" id="chevron-icon"></i>Filtres
+                    </button>
+                    <button type="button" class="btn btn-outline-primary" id="reset-filters">
+                        <i class="fa-solid fa-arrows-rotate me-2" id="reset-icon"></i>Reset
+                    </button>
+                </div>
+
+                <!-- Zone des filtres collapsible (fermée par défaut) -->
+                <div class="collapse mt-3" id="filtersCollapse">
+                    <div class="row g-2 mb-3">
+                        <!-- Filtres en ligne -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <select id="filter-sujet" class="form-select form-select-sm">
+                                <option value="all" selected>Tous sujets</option>
+                                <option value="paysage">Paysage</option>
+                                <option value="portrait">Portrait</option>
+                                <option value="nature morte">Nature morte</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <select id="filter-category" class="form-select form-select-sm">
+                                <option value="all" selected>Toutes catégories</option>
+                                <option value="painting">Peintures</option>
+                                <option value="drawing">Dessins</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <select id="filter-size" class="form-select form-select-sm">
+                                <option value="all" selected>Toutes tailles</option>
+                                <option value='16"x12"'>16"x12"</option>
+                                <option value='12"x16"'>12"x16"</option>
+                                <option value='9"x12"'>9"x12"</option>
+                                <option value='9"x8"'>9"x8"</option>
+                                <option value='24"x18"'>24"x18"</option>
+                                <option value='48"x24"'>48"x24"</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <select id="filter-status" class="form-select form-select-sm">
+                                <option value="all" selected>Toutes disponibilités</option>
+                                <option value="disponible">Disponible</option>
+                                <option value="indisponible">Indisponible</option>
+                            </select>
+                        </div>
 
 
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <select id="filter-medium" class="form-select form-select-sm">
+                                <option value="all" selected>Tous supports</option>
+                                <option value="Huile sur panneau">Panneau</option>
+                                <option value="Huile sur toile">Toile</option>
+                                <option value="Papier">Papier</option>
+                            </select>
+                        </div>
 
-
-  
-            <label class="toggle-switch" id="archived-toggle">
-                <input type="checkbox" >
-                <span class="slider"></span>
-            </label>
-            <div class="ml-3">Afficher les projets archivés seulement</div>
-        
+                        <!-- Toggle archivés -->
+                        <div class="col-12 col-sm-auto">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="archived-toggle">
+                                <label class="form-check-label small" for="archived-toggle">
+                                    Archivés uniquement
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="card-columns p-5" id="gallery">
             <!-- Items will be inserted here -->
@@ -146,8 +236,8 @@
 
 
 
- <div class="container mb-5" style="height: 5vh;"><img src="images/svg/line-deco.png" alt="" class="img-fluid"
-            style="scale: 0.5;" id="section1"></div>
+    <div class="container mb-5" style="height: 5vh;"><img src="images/svg/line-deco.png" alt="" class="img-fluid"
+            style="scale: 0.25;" id="section1"></div>
 
 
 
@@ -192,10 +282,10 @@
 
             <!-- Social icons -->
             <div>
-                <a href="https://www.instagram.com" target="_blank" class="text-dark me-4 opacity-links">
+                <a href="https://www.instagram.com/tommyroyart/" target="_blank" class="text-dark me-4 opacity-links">
                     <i class="fab fa-instagram fa-lg" style="scale: 1.5;"></i>
                 </a>
-                <a href="https://www.facebook.com" target="_blank" class="text-dark me-4 opacity-links">
+                <a href="https://www.facebook.com/tommy.roy.1004/" target="_blank" class="text-dark me-4 opacity-links">
                     <i class="fab fa-facebook fa-lg" style="scale: 1.5;"></i>
                 </a>
                 <a href="contact.html" class="text-dark opacity-links">
