@@ -30,27 +30,26 @@
 
 <body>
     <!-- navbar -->
-    <nav class="my-nav navbar navbar-expand-lg mt-2 sticky-top">
+    <nav class="my-nav navbar ">
         <div class="container">
-            <!-- <a class="navbar-brand fs-2 praise-font" href="index.html" style="color: #341830;">Tommy Roy</a> -->
-            <a class="nav-link my-magenta opacity-links links-mauve" href="index.html">
-                <div class="button2">
-                    <p>Acceuil</p>
-                </div>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mr-4">
+            <div class="navbar-collapse" id="navbarNav">
+                <ul
+                    class="navbar-nav d-flex flex-row mx-auto mx-lg-0 justify-content-center justify-content-lg-end text-center text-lg-start w-100">
+                    <li class="nav-item me-4">
+                        <a class="nav-link my-magenta opacity-links links-mauve" href="index.html">
+                            <div class="button2">
+                                <p><i class="fa-solid fa-house " style="font-size: 1.3rem;"></i></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item me-4">
                         <a class="nav-link my-magenta opacity-links links-mauve" href="about.html">
                             <div class="button2">
                                 <p>À propos</p>
                             </div>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item me-4">
                         <a class="nav-link my-magenta opacity-links links-mauve" href="portfolio.html">
                             <div class="button2">
                                 <p>Portfolio</p>
@@ -69,87 +68,47 @@
         </div>
     </nav>
 
-    <div class="container p-5">
 
-        <div class="row praise-font text-center d-flex justify-content-center fade-in"
-            style="color: #341830; font-size: 125px;">
-            Mes Projets</div>
-        <div class="container px-5 mx-5" style="height: 20vh;">
-            <div class="row">
-                <div class="col-2"></div>
-                <div class="col-7">
-                    <p class="texte">Voici une galerie numérique rescensnat mes meilleurs projets créatifs. Les points
-                        de couleurs rouges ou vers vous informe de la disponibilité de ces derniers. Pour une commande
-                        de peinture personnalisée ou pour l'éventuel achat d'un projet, <a href="contact.html"
-                            class="text-dark fst-italic opacity-links" style="color: #341830 !important;">cliquez
-                            ici</a>.</p>
-                </div>
-                <div class="col-2"></div>
+
+    <div class="container">
+        <div class="row mb-3 mb-md-4 praise-font text-center justify-content-center fade-in">
+            <div class="col-12">
+                <h1 class="display-1 fw-bold" style="color: #341830; font-size: clamp(2.5rem, 10vw, 125px);">
+                    Mes projets
+                </h1>
             </div>
         </div>
 
+        <div class="row mt-5  justify-content-center">
+            <div class="col-md-6 col-12 px-4">
+                <!-- Texte aligné à gauche -->
+                <p class="texte text-start lh-lg">
+                    Voici une galerie numérique recensant mes meilleurs projets créatifs. Les points de couleur rouge ou
+                    verte indiquent la disponibilité de chacun d’eux.
+                    Pour une commande de peinture personnalisée ou pour acheter l’une de mes créations,
+                    <a href="contact.html" class="text-dark fst-italic opacity-links"
+                        style="color: #341830 !important;">
+                        cliquez&nbsp;ici</a> pour me contacter.
+                </p>
 
-        <div class="container mb-5" style="height: 5vh;"><img src="images/svg/line-deco.png" alt="" class="img-fluid"
-                style="scale: 0.25;" id="section1"></div>
-
-        <!-- <div class="" id="reset-filters" style="cursor: pointer !important;">
-            <i class="fa-solid fa-arrows-rotate"></i>Réinitialiser
+                <!-- Bouton centré -->
+                <div class="mt-5 d-flex justify-content-center">
+                    <a href="contact.html" class="links-white">
+                        <button type="button" class="btn btn-primary fade-in shadow fst-italic">
+                            Intéressé par une œuvre&nbsp;?
+                        </button>
+                    </a>
+                </div>
+            </div>
         </div>
+    </div>
 
+    <div class="container text-center">
 
+        <img src="images/svg/line-deco.png" alt="" class=" img-fluid my-5" style="max-width: min(300px, 90vw);">
 
-        <div class="additional-filters p-3">
-            <label for="filter-category">Taille :</label>
-            <select id="filter-category">
-                <option value="all" selected>Toutes</option>
-                <option value="painting">Peintures</option>
-                <option value="drawing">Dessins</option>
-            </select>
-
-            <label for="filter-size">Taille :</label>
-            <select id="filter-size">
-                <option value="all" selected>Toutes</option>
-                <option value='16"x12"'>16"x12"</option>
-                <option value='12"x16"'>12"x16"</option>
-                <option value='9"x12"'>9"x12"</option>
-                <option value='9"x8"'>9"x8"</option>
-                <option value='24"x18"'>24"x18"</option>
-                <option value='48"x24"'>48"x24"</option>
-            </select>
-
-            <label for="filter-status">Disponibilité :</label>
-            <select id="filter-status">
-                <option value="all" selected>Toutes</option>
-                <option value="disponible">Disponible</option>
-                <option value="indisponible">Indisponible</option>
-            </select>
-
-            <label for="filter-sujet">Sujet :</label>
-            <select id="filter-sujet">
-                <option value="all" selected>Tous</option>
-                <option value="paysage">Paysage</option>
-                <option value="portrait">Portrait</option>
-                <option value="nature morte">Nature morte</option>
-            </select>
-
-            <label for="filter-medium">Support :</label>
-            <select id="filter-medium">
-                <option value="all" selected>Tous</option>
-                <option value="Huile sur panneau">Panneau</option>
-                <option value="Huile sur toile">Toile</option>
-                <option value="Papier">Papier</option>
-            </select>
-        </div>
-
-
-        <label class="toggle-switch" id="archived-toggle">
-            <input type="checkbox">
-            <span class="slider"></span>
-        </label>
-        <div class="ml-3">Afficher les projets archivés seulement</div> -->
-
-        <div class="container-fluid p-3">
-            <div class="border rounded p-3" style="background-color: #ebe9e0;">
+        <div class="row mt-3  px-4">
+            <div class="col-12 border rounded p-3" style="background-color: #ebe9e0;">
                 <!-- En-tête avec boutons filtres et reset -->
                 <div class="d-flex justify-content-between align-items-center">
                     <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
@@ -224,72 +183,72 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-12  card-columns mt-5" id="gallery">
+                <!-- Items will be inserted here -->
+            </div>
         </div>
 
-        <div class="card-columns p-5" id="gallery">
-            <!-- Items will be inserted here -->
-        </div>
+
+
+        <img src="images/svg/line-deco.png" alt="" class=" img-fluid my-3" style="max-width: min(300px, 90vw);">
+
+
+
     </div>
 
 
 
 
 
-
-    <div class="container mb-5" style="height: 5vh;"><img src="images/svg/line-deco.png" alt="" class="img-fluid"
-            style="scale: 0.25;" id="section1"></div>
-
-
-
-
-
-
     <!-- footer -->
-    <footer class="py-4 mt-5">
+    <footer class="py-4 mt-3">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
 
             <!-- Horizontal navigation -->
-            <ul class="nav mb-3 mb-md-0">
-                <li class="nav-item mr-4">
-                    <a class="nav-link my-magenta opacity-links links-mauve" href="index.html">
-                        <div class="button2">
-                            <p>Acceuil</p>
+            <ul class="nav mb-3 mb-md-0 justify-content-center justify-content-md-start flex-wrap">
+                <li class="nav-item me-2 me-md-4 mb-2 mb-md-0">
+                    <a class="nav-link my-magenta opacity-links links-mauve p-1" href="index.html">
+                        <div class="button2 mt-1 mt-md-0">
+                            <p class="mb-0"><i class="fa-solid fa-house " style="font-size: 1.3rem;"></i></p>
                         </div>
                     </a>
                 </li>
-                <li class="nav-item mr-4">
-                    <a class="nav-link my-magenta opacity-links links-mauve" href="about.html">
+                <li class="nav-item me-2 me-md-4 mb-2 mb-md-0">
+                    <a class="nav-link my-magenta opacity-links links-mauve p-1" href="about.html">
                         <div class="button2">
-                            <p>À propos</p>
+                            <p class="mb-0" style="font-size: 1.3rem;">À propos</p>
                         </div>
                     </a>
                 </li>
-                <li class="nav-item mr-4">
-                    <a class="nav-link my-magenta opacity-links links-mauve" href="portfolio.html">
+                <li class="nav-item me-2 me-md-4 mb-2 mb-md-0">
+                    <a class="nav-link my-magenta opacity-links links-mauve p-1" href="portfolio.html">
                         <div class="button2">
-                            <p>Portfolio</p>
+                            <p class="mb-0" style="font-size: 1.3rem;">Portfolio</p>
                         </div>
                     </a>
                 </li>
-                <li class="nav-item mr-4">
-                    <a class="nav-link my-magenta opacity-links links-mauve" href="contact.html">
+                <li class="nav-item me-2 me-md-4 mb-2 mb-md-0">
+                    <a class="nav-link my-magenta opacity-links links-mauve p-1" href="contact.html">
                         <div class="button2">
-                            <p>Contact</p>
+                            <p class="mb-0" style="font-size: 1.3rem;">Contact</p>
                         </div>
                     </a>
                 </li>
             </ul>
 
             <!-- Social icons -->
-            <div>
-                <a href="https://www.instagram.com/tommyroyart/" target="_blank" class="text-dark me-4 opacity-links">
-                    <i class="fab fa-instagram fa-lg" style="scale: 1.5;"></i>
+            <div class="d-flex justify-content-center mt-3 mt-md-0">
+                <a href="https://www.instagram.com/tommyroyart/" target="_blank"
+                    class="text-dark me-3 me-md-4 opacity-links">
+                    <i class="fab fa-instagram fa-lg fs-2"></i>
                 </a>
-                <a href="https://www.facebook.com/tommy.roy.1004/" target="_blank" class="text-dark me-4 opacity-links">
-                    <i class="fab fa-facebook fa-lg" style="scale: 1.5;"></i>
+                <a href="https://www.facebook.com/tommyroyart" target="_blank"
+                    class="text-dark me-3 me-md-4 opacity-links">
+                    <i class="fab fa-facebook fa-lg fs-2"></i>
                 </a>
                 <a href="contact.html" class="text-dark opacity-links">
-                    <i class="fas fa-envelope fa-lg" style="scale: 1.5;"></i>
+                    <i class="fas fa-envelope fa-lg fs-2"></i>
                 </a>
             </div>
         </div>

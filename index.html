@@ -34,23 +34,26 @@
 
 
     <!-- navbar -->
-    <nav class="my-nav navbar navbar-expand-lg mt-2 sticky-top">
+    <nav class="my-nav navbar ">
         <div class="container">
-            <!-- <a class="navbar-brand" href="index.html"><i class="fa-solid fa-house-chimney my-magenta"
-                    style="scale: 1.5;"></i></a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mr-4">
+            <div class="navbar-collapse" id="navbarNav">
+                <ul
+                    class="navbar-nav d-flex flex-row mx-auto mx-lg-0 justify-content-center justify-content-lg-end text-center text-lg-start w-100">
+                    <li class="nav-item me-4">
+                        <a class="nav-link my-magenta opacity-links links-mauve" href="index.html">
+                            <div class="button2">
+                                <p><i class="fa-solid fa-house " style="font-size: 1.3rem;"></i></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item me-4">
                         <a class="nav-link my-magenta opacity-links links-mauve" href="about.html">
                             <div class="button2">
                                 <p>À propos</p>
                             </div>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item me-4">
                         <a class="nav-link my-magenta opacity-links links-mauve" href="portfolio.html">
                             <div class="button2">
                                 <p>Portfolio</p>
@@ -69,142 +72,142 @@
         </div>
     </nav>
 
-    <a href="#section1"><i
-            class="d-none d-lg-block fa-solid fa-chevron-down my-chevron-opacity-header my-chevron-animation my-chevron-123"
-            style="position: fixed; bottom: 8%; left: 50%; font-size: 20px; z-index: 1000; color: #341830; scale: 75%;"></i></a>
 
 
 
-    <div class="container" style="height: 90vh;">
-        <div class="row mb-4 praise-font text-center d-flex justify-content-center fade-in"
-            style="color: #341830; font-size: 125px;">
-            Tommy Roy</div>
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-2 p-4">
-                <img class="img-fluid rounded shadow slide-in-left" style="rotate: -5deg;"
+
+    <div class="container py-3 py-md-5 container-index">
+        <!-- Title Row -->
+        <div class="row mb-3 mb-md-4 praise-font text-center justify-content-center fade-in">
+            <div class="col-12">
+                <h1 class="display-1 fw-bold" style="color: #341830; font-size: clamp(2.5rem, 10vw, 125px);">
+                    Tommy Roy
+                </h1>
+            </div>
+        </div>
+
+        <!-- Content Row -->
+        <div class="row align-items-center justify-content-center">
+            <!-- Image Column -->
+            <div class="col-12 col-md-4 p-3 p-md-5 text-center">
+                <img class="img-fluid rounded shadow slide-in-left mb-3" style="rotate: -5deg; max-width: 10rem;"
                     src="images/autre/moi-jaune-1mb.jpg" alt="photographie de Tommy Roy avec une casquette">
 
-                <div class="d-flex mt-5 justify-content-between">
-                    <a href="https://www.instagram.com/tommyroyart/" target="_blank" class="text-dark me-4 opacity-links">
-                        <i class="fab fa-instagram fa-lg" style="scale: 1.5;"></i>
+                <div class="d-flex justify-content-center mt-3 mt-md-4 gap-3 gap-md-4">
+                    <a href="https://www.instagram.com/tommyroyart/" target="_blank" class="text-dark opacity-links">
+                        <i class="fab fa-instagram fa-2x"></i>
                     </a>
-                    <a href="https://www.facebook.com/tommy.roy.1004/" target="_blank" class="text-dark me-4 opacity-links">
-                        <i class="fab fa-facebook fa-lg" style="scale: 1.5;"></i>
+                    <a href="https://www.facebook.com/tommyroyart" target="_blank" class="text-dark opacity-links">
+                        <i class="fab fa-facebook fa-2x"></i>
                     </a>
-                    <a href="contact.html" class="text-dark opacity-links ">
-                        <i class="fas fa-envelope fa-lg" style="scale: 1.5;"></i>
+                    <a href="contact.html" class="text-dark opacity-links">
+                        <i class="fas fa-envelope fa-2x"></i>
                     </a>
                 </div>
-
             </div>
 
-            <div class="col-1"></div>
-            <div class="col-5 p-4">
-                <p class="fade-in texte">
-                    Voici mon site internet, où je partage principalement mes peintures à l'huile.
-                    Vous y
-                    découvrirez une variété de sujets, allant des natures mortes aux paysages en passant par les
+            <!-- Text Column -->
+            <div class="col-12 col-md-7 col-lg-6 p-3 p-md-4">
+                <p class="fade-in texte text-center text-md-start lh-lg">
+                    Bienvenue sur mon site internet ! Il s’agit du meilleur endroit pour me contacter ainsi que pour
+                    découvrir mes œuvres.
+                    Vous y trouverez une variété de sujets, allant des natures mortes aux paysages, en passant par les
                     portraits.
                 </p>
-                <a href="portfolio.html" class="links-white"><button type="button"
-                        class="btn btn-primary float-end fade-in shadow fst-italic">Voir mes projets</button></a>
-
+                <div class="text-center text-md-end">
+                    <a href="portfolio.html" class="links-white">
+                        <button type="button" class="btn btn-primary fade-in shadow fst-italic mt-3 mt-md-4">
+                            Voir mes projets
+                        </button>
+                    </a>
+                </div>
             </div>
-            <div class="col-2"></div>
         </div>
 
-    </div>
-
-    <div class="container mb-5" style="height: 5vh;"><img src="images/svg/line-deco.png" alt="" class="img-fluid"
-            style="scale: 0.25;" id="section1"></div>
-
-    <div class="container" style="height: 70vh;">
-        <div class="row praise-font fade-in mt-3 text-center justify-content-center"
-            style="color: #341830; font-size: 75px;">
-            Quoi de neuf ?</div>
-
-        <div class="row justify-content-center position-relative">
-            <script src="https://static.elfsight.com/platform/platform.js" async></script>
-            <div class="elfsight-app-5e059b5c-451b-4804-ba57-5a7f0413227a" data-elfsight-app-lazy></div>
-
-
-            <!-- <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-            <iframe
-                src="//lightwidget.com/widgets/6bd599174e7e50349a5298cc3448269c.html" scrolling="no"
-                allowtransparency="true" class="lightwidget-widget"
-                style="width:50%;height:10px !important;border:0;overflow:hidden !important;"></iframe> -->
-
-
-        </div>
-    </div>
-
-    <div class="container mt-5" style="height: 10vh;"><img src="images/svg/line-deco.png" alt="" class="img-fluid"
-            style="scale: 0.25;"></div>
-
-
-
-    <!-- <div class="container px-5 mt-5" style="background-color: #341830; height: 25vh;">
-        <div class="row praise-font fade-in mt-3 text-center justify-content-center"
-            style="color: #F7F2E4; font-size: 75px;">
-            Me contacter</div>
+        <!-- Chevron -->
         <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
+            <div class="col text-center">
+                <a href="#section1">
+                    <i class="fa-solid fa-chevron-down opacity-links my-chevron-animation my-chevron-123"
+                        style="font-size: 1.25rem; color: #341830;"></i>
+                </a>
+            </div>
         </div>
-    </div> -->
+    </div>
 
+    <div class="container text-center">
+        <!-- Ligne déco du haut -->
+        <img src="images/svg/line-deco.png" alt="" class="img-fluid my-3" id="section1"
+            style="max-width: min(300px, 90vw);">
 
+        <!-- Titre -->
+        <div class="row praise-font fade-in mt-3 text-center justify-content-center"
+            style="color: #341830; font-size: clamp(2rem, 8vw, 75px);">
+            <div class="col-12">
+                Quoi de neuf ?
+            </div>
+        </div>
 
+        <!-- Widget Elfsight -->
+        <div class="d-flex justify-content-center position-relative mt-4 px-2 px-md-3 rounded">
+            <div class="col-12 col-lg-10 col-xl-8 text-center">
+                <script src="https://static.elfsight.com/platform/platform.js" async></script>
+                <div class="elfsight-app-5e059b5c-451b-4804-ba57-5a7f0413227a" data-elfsight-app-lazy></div>
+            </div>
+        </div>
 
+        <!-- Ligne déco du bas -->
+        <img src="images/svg/line-deco.png" alt="" class="img-fluid my-3" style="max-width: min(300px, 90vw);">
+    </div>
 
     <!-- footer -->
-
     <footer class="py-4 mt-5">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
 
             <!-- Horizontal navigation -->
-            <ul class="nav mb-3 mb-md-0">
-                <li class="nav-item mr-4">
-                    <a class="nav-link my-magenta opacity-links links-mauve" href="#">
-                        <div class="button2">
-                            <p>Acceuil</p>
+            <ul class="nav mb-3 mb-md-0 justify-content-center justify-content-md-start flex-wrap">
+                <li class="nav-item me-2 me-md-4 mb-2 mb-md-0">
+                    <a class="nav-link my-magenta opacity-links links-mauve p-1" href="index.html">
+                        <div class="button2 mt-1 mt-md-0">
+                            <p class="mb-0"><i class="fa-solid fa-house " style="font-size: 1.3rem;"></i></p>
                         </div>
                     </a>
                 </li>
-                <li class="nav-item mr-4">
-                    <a class="nav-link my-magenta opacity-links links-mauve" href="#">
+                <li class="nav-item me-2 me-md-4 mb-2 mb-md-0">
+                    <a class="nav-link my-magenta opacity-links links-mauve p-1" href="about.html">
                         <div class="button2">
-                            <p>À propos</p>
+                            <p class="mb-0" style="font-size: 1.3rem;">À propos</p>
                         </div>
                     </a>
                 </li>
-                <li class="nav-item mr-4">
-                    <a class="nav-link my-magenta opacity-links links-mauve" href="#">
+                <li class="nav-item me-2 me-md-4 mb-2 mb-md-0">
+                    <a class="nav-link my-magenta opacity-links links-mauve p-1" href="portfolio.html">
                         <div class="button2">
-                            <p>Portfolio</p>
+                            <p class="mb-0" style="font-size: 1.3rem;">Portfolio</p>
                         </div>
                     </a>
                 </li>
-                <li class="nav-item mr-4">
-                    <a class="nav-link my-magenta opacity-links links-mauve" href="contact.html">
+                <li class="nav-item me-2 me-md-4 mb-2 mb-md-0">
+                    <a class="nav-link my-magenta opacity-links links-mauve p-1" href="contact.html">
                         <div class="button2">
-                            <p>Contact</p>
+                            <p class="mb-0" style="font-size: 1.3rem;">Contact</p>
                         </div>
                     </a>
                 </li>
             </ul>
 
             <!-- Social icons -->
-            <div>
-                <a href="https://www.instagram.com/tommyroyart/" target="_blank" class="text-dark me-4 opacity-links">
-                    <i class="fab fa-instagram fa-lg" style="scale: 1.5;"></i>
+            <div class="d-flex justify-content-center mt-3 mt-md-0">
+                <a href="https://www.instagram.com/tommyroyart/" target="_blank"
+                    class="text-dark me-3 me-md-4 opacity-links">
+                    <i class="fab fa-instagram fa-lg fs-2"></i>
                 </a>
-                <a href="https://www.facebook.com/tommy.roy.1004/" target="_blank" class="text-dark me-4 opacity-links">
-                    <i class="fab fa-facebook fa-lg" style="scale: 1.5;"></i>
+                <a href="https://www.facebook.com/tommyroyart" target="_blank"
+                    class="text-dark me-3 me-md-4 opacity-links">
+                    <i class="fab fa-facebook fa-lg fs-2"></i>
                 </a>
                 <a href="contact.html" class="text-dark opacity-links">
-                    <i class="fas fa-envelope fa-lg" style="scale: 1.5;"></i>
+                    <i class="fas fa-envelope fa-lg fs-2"></i>
                 </a>
             </div>
         </div>

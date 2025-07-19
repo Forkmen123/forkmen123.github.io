@@ -31,27 +31,26 @@
 <body>
 
     <!-- navbar -->
-    <nav class="my-nav navbar navbar-expand-lg mt-2 sticky-top">
+    <nav class="my-nav navbar ">
         <div class="container">
-            <!-- <a class="navbar-brand fs-2 praise-font" href="index.html" style="color: #341830;">Tommy Roy</a> -->
-            <a class="nav-link my-magenta opacity-links links-mauve" href="index.html">
-                <div class="button2">
-                    <p>Acceuil</p>
-                </div>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mr-4">
+            <div class="navbar-collapse" id="navbarNav">
+                <ul
+                    class="navbar-nav d-flex flex-row mx-auto mx-lg-0 justify-content-center justify-content-lg-end text-center text-lg-start w-100">
+                    <li class="nav-item me-4">
+                        <a class="nav-link my-magenta opacity-links links-mauve" href="index.html">
+                            <div class="button2">
+                                <p><i class="fa-solid fa-house " style="font-size: 1.3rem;"></i></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item me-4">
                         <a class="nav-link my-magenta opacity-links links-mauve" href="about.html">
                             <div class="button2">
                                 <p>À propos</p>
                             </div>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item me-4">
                         <a class="nav-link my-magenta opacity-links links-mauve" href="portfolio.html">
                             <div class="button2">
                                 <p>Portfolio</p>
@@ -72,7 +71,7 @@
 
     <div class="container p-5 text-center" style="height: 50vh;">
         <p class="mt-5">Message envoyé avec succès !</p>
-        <a href="index.html">retourner à la page d'acceuil</a>
+        <a href="index.html">Retourner à la page d'acceuil</a>
     </div>
 
     <!-- footer -->
@@ -80,47 +79,49 @@
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
 
             <!-- Horizontal navigation -->
-            <ul class="nav mb-3 mb-md-0">
-                <li class="nav-item mr-4">
-                    <a class="nav-link my-magenta opacity-links links-mauve" href="index.html">
-                        <div class="button2">
-                            <p>Acceuil</p>
+            <ul class="nav mb-3 mb-md-0 justify-content-center justify-content-md-start flex-wrap">
+                <li class="nav-item me-2 me-md-4 mb-2 mb-md-0">
+                    <a class="nav-link my-magenta opacity-links links-mauve p-1" href="#">
+                        <div class="button2 mt-1 mt-md-0">
+                            <p class="mb-0"><i class="fa-solid fa-house " style="font-size: 1.3rem;"></i></p>
                         </div>
                     </a>
                 </li>
-                <li class="nav-item mr-4">
-                    <a class="nav-link my-magenta opacity-links links-mauve" href="about.html">
+                <li class="nav-item me-2 me-md-4 mb-2 mb-md-0">
+                    <a class="nav-link my-magenta opacity-links links-mauve p-1" href="about.html">
                         <div class="button2">
-                            <p>À propos</p>
+                            <p class="mb-0" style="font-size: 1.3rem;">À propos</p>
                         </div>
                     </a>
                 </li>
-                <li class="nav-item mr-4">
-                    <a class="nav-link my-magenta opacity-links links-mauve" href="portfolio.html">
+                <li class="nav-item me-2 me-md-4 mb-2 mb-md-0">
+                    <a class="nav-link my-magenta opacity-links links-mauve p-1" href="portfolio.html">
                         <div class="button2">
-                            <p>Portfolio</p>
+                            <p class="mb-0" style="font-size: 1.3rem;">Portfolio</p>
                         </div>
                     </a>
                 </li>
-                <li class="nav-item mr-4">
-                    <a class="nav-link my-magenta opacity-links links-mauve" href="contact.html">
+                <li class="nav-item me-2 me-md-4 mb-2 mb-md-0">
+                    <a class="nav-link my-magenta opacity-links links-mauve p-1" href="contact.html">
                         <div class="button2">
-                            <p>Contact</p>
+                            <p class="mb-0" style="font-size: 1.3rem;">Contact</p>
                         </div>
                     </a>
                 </li>
             </ul>
 
             <!-- Social icons -->
-            <div>
-                <a href="https://www.instagram.com" target="_blank" class="text-dark me-4 opacity-links">
-                    <i class="fab fa-instagram fa-lg" style="scale: 1.5;"></i>
+            <div class="d-flex justify-content-center mt-3 mt-md-0">
+                <a href="https://www.instagram.com/tommyroyart/" target="_blank"
+                    class="text-dark me-3 me-md-4 opacity-links">
+                    <i class="fab fa-instagram fa-lg fs-2"></i>
                 </a>
-                <a href="https://www.facebook.com" target="_blank" class="text-dark me-4 opacity-links">
-                    <i class="fab fa-facebook fa-lg" style="scale: 1.5;"></i>
+                <a href="https://www.facebook.com/tommyroyart" target="_blank"
+                    class="text-dark me-3 me-md-4 opacity-links">
+                    <i class="fab fa-facebook fa-lg fs-2"></i>
                 </a>
                 <a href="contact.html" class="text-dark opacity-links">
-                    <i class="fas fa-envelope fa-lg" style="scale: 1.5;"></i>
+                    <i class="fas fa-envelope fa-lg fs-2"></i>
                 </a>
             </div>
         </div>

@@ -1,7 +1,7 @@
 // Configuration
 const CONFIG = {
     navOpacityThreshold: 200,
-    chevronOpacityThreshold: 100,
+    chevronOpacityThreshold: 800,
     defaultSort: 'desc'
 };
 
@@ -147,26 +147,38 @@ function createGalleryItem(item) {
     const safePriceAttr = escapeAttribute(item.price || '');
     const safeStatusAttr = escapeAttribute(item.status || '');
 
-    const statusClass = item.status === 'disponible' ? 'dot-green' : 'dot-red';
+    const statusClass = item.status === 'Disponible' ? 'dot-green' : 'dot-red';
     const descriptionText = safeDescriptionAttr ? `&#8212; <em>${safeDescriptionAttr}</em>` : '';
 
     div.innerHTML = `
 
-        <div class="position-relative">
-            <a href="${item.image}" 
-               data-lightbox="gallery" 
-               data-title="<strong>${safeTitleAttr}</strong> <em>${descriptionText}</em><small> &#8212; ${safeSizeAttr} &#8212; ${year}<br> ${safePriceAttr}</small><strong> ${safeStatusAttr}</strong>"
-               aria-label="Voir ${safeTitle}">
-                <img src="${item.thumbnail || item.image}" 
-                     class="card mb-4 fade-in" 
-                     alt="${safeTitle}"
-                     loading="lazy">
-                <span class="status-dot ${statusClass}" aria-hidden="true"></span>
-            </a>
-        </div>
+        <div class="position-relative gallery-hover-wrapper">
+    <a href="${item.image}" 
+       data-lightbox="gallery" 
+       data-title="<strong>${safeTitleAttr}</strong> <em>${descriptionText}</em><small> &#8212; ${safeSizeAttr} &#8212; ${year}<br> ${safePriceAttr}</small><strong> ${safeStatusAttr}</strong>"
+       aria-label="Voir ${safeTitle}">
+        <img src="${item.thumbnail || item.image}" 
+             class="card mb-4 fade-in" 
+             alt="${safeTitle}"
+             loading="lazy">
+        <span class="status-dot ${statusClass}" aria-hidden="true"></span>
+       <div class="gallery-overlay d-flex flex-column rounded">
+    <div class="d-flex justify-content-between">
+        <span class="overlay-text text-start fw-bold">${safeTitle}</span>
+        <span class="overlay-text text-end">${safeSizeAttr}</span>
+    </div>
+    <div class="d-flex justify-content-between">
+        <span class="overlay-text text-start fst-italic">${safeStatusAttr}</span>
+        <span class="overlay-text text-end">${safePrice}</span>
+    </div>
+</div>
+
+    </a>
+</div>
+
     `;
 
-    return div; 
+    return div;
 }
 
 // Rendu de la galerie
