@@ -52,7 +52,7 @@
         "description": "Portrait de Charlie se cachant derrière un appareil photo.",
         "date": "2024-05-05",
         "archived": false,
-        "price": "150 $",
+        "price": "180 $",
         "status": "Disponible"
     },
     {
@@ -66,7 +66,7 @@
         "description": "Peinture faite en plein air.",
         "date": "2023-05-05",
         "archived": false,
-        "price": "150 $",
+        "price": "180 $",
         "status": "Disponible"
     },
     {
@@ -164,7 +164,7 @@
         "description": "",
         "date": "2025-05-05",
         "archived": false,
-        "price": "380 $",
+        "price": "400 $",
         "status": "Disponible"
     },
     {
@@ -178,7 +178,7 @@
         "description": "Au soleil matinal.",
         "date": "2025-05-05",
         "archived": false,
-        "price": "175 $",
+        "price": "180 $",
         "status": "Disponible"
     },
     {
@@ -192,7 +192,7 @@
         "description": "En fait, il s'agit d'un magasin.",
         "date": "2025-05-05",
         "archived": false,
-        "price": "100 $",
+        "price": "125 $",
         "status": "Disponible"
     },
     {
@@ -206,8 +206,8 @@
         "description": "Tout près des brins.",
         "date": "2025-05-05",
         "archived": false,
-        "price": "125 $",
-        "status": "Disponible"
+        "price": " ",
+        "status": "Indisponible"
     },
     {
         "title": "Parmi les Brins",
@@ -220,7 +220,7 @@
         "description": "Tout près de la rivière.",
         "date": "2025-05-05",
         "archived": false,
-        "price": "80 $",
+        "price": "100 $",
         "status": "Disponible"
     },
     {
@@ -262,7 +262,7 @@
         "description": "La chute de Saint-Agathe.",
         "date": "2025-05-05",
         "archived": false,
-        "price": "175 $",
+        "price": "135 $",
         "status": "Disponible"
     },
     {
@@ -276,7 +276,7 @@
         "description": "Peinture faite en plein air.",
         "date": "2023-05-05",
         "archived": false,
-        "price": "125 $",
+        "price": "100 $",
         "status": "Disponible"
     }
 ]
