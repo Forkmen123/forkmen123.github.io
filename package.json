@@ -4,21 +4,21 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Forkmen123/forkmen123.github.io.git"
+    "url": "git+https://github.com/Forkmen123/tommyroy.com.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/Forkmen123/forkmen123.github.io/issues"
+    "url": "https://github.com/Forkmen123/tommyroy.com/issues"
   },
-  "homepage": "https://github.com/Forkmen123/forkmen123.github.io#readme",
+  "homepage": "https://github.com/Forkmen123/tommyroy.com#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2"
   }
