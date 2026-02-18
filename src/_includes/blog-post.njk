@@ -1,0 +1,52 @@
+---
+layout: base.njk
+---
+
+<div class="container py-5">
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+            <span class="badge bg-secondary mb-2">{{ tags[0] }}</span>
+            <h1 class="display-4 fw-bold" style="color: #341830;">{{ title }}</h1>
+            <p class="text-muted fst-italic">{{ date | readableDate }}</p>
+            <hr class="my-4" style="width: 50px; margin: 0 auto; border-top: 3px solid #341830;">
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8 article-content fs-5 lh-lg">
+            {{ content | safe }}
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5 pt-5 border-top">
+        <div class="col-lg-8">
+            <h3 class="h5 mb-4">À lire aussi sur le blog :</h3>
+            <div class="list-group">
+                {# Boucle sur les articles précédents et suivants #}
+                {% set previousPost = collections.blogPosts | getPreviousCollectionItem(page) %}
+                {% set nextPost = collections.blogPosts | getNextCollectionItem(page) %}
+
+                {% if nextPost %}
+                    <a href="{{ nextPost.url }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        <div>
+                            <small class="text-muted">Suivant</small><br>
+                            <strong>{{ nextPost.data.title }}</strong>
+                        </div>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                {% endif %}
+
+                {% if previousPost %}
+                    <a href="{{ previousPost.url }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        <div>
+                            <small class="text-muted">Précédent</small><br>
+                            <strong>{{ previousPost.data.title }}</strong>
+                        </div>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+        <iframe src="https://tommyroy.substack.com/embed" width="480" height="150" frameborder="0" scrolling="no"></iframe>
+    </div>
+</div>

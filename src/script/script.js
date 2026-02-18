@@ -91,7 +91,7 @@ function setupScrollEffects() {
 // Chargement des données
 async function loadGalleryData() {
     try {
-        const response = await fetch('gallery.json');
+        const response = await fetch('/script/gallery.json');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
         const data = await response.json();

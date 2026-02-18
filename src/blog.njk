@@ -1,0 +1,55 @@
+---
+layout: base.njk
+title: Blog - Tommy Roy
+---
+
+<div class="container py-5">
+    <div class="row mb-5 text-center">
+        <div class="col-12">
+            <h1 class="display-4 praise-font" style="color: #341830;">Journal de Bord</h1>
+            <p class="lead text-muted">Réflexions sur la physique, la peinture et le code.</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="list-group shadow-sm">
+                
+                {% for post in collections.blogPosts %}
+                    <a href="{{ post.url }}" class="list-group-item list-group-item-action p-4 border-0 border-bottom">
+                        <div class="d-flex w-100 justify-content-between align-items-center mb-2">
+                            <h2 class="h4 mb-0" style="color: #341830;">{{ post.data.title }}</h2>
+                            <small class="text-muted text-nowrap ms-3">
+                                {{ post.date | readableDate }}
+                            </small>
+                        </div>
+                        
+                        <p class="mb-1 text-secondary">
+                            {% if post.data.description %}
+                                {{ post.data.description }}
+                            {% else %}
+                                Lire l'article...
+                            {% endif %}
+                        </p>
+                        
+                        <div class="mt-2">
+                            {% for tag in post.data.tags %}
+                                {% if tag != "posts" %}
+                                    <span class="badge bg-light text-dark border">{{ tag }}</span>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </a>
+                {% else %}
+                    <div class="p-4 text-center text-muted">
+                        <p>Aucun article publié pour le moment.</p>
+                    </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+     <div class="row mb-5 text-center" style="min-height: 300px">
+        
+    </div>
+</div>

@@ -14,6 +14,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("recentPosts", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/blog/*.md").reverse().slice(0, 3);
   });
+  
+  eleventyConfig.addCollection("blogPosts", function(collectionApi) {
+      return collectionApi.getFilteredByGlob("src/blog/*.md").reverse();
+  });
+  
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return dateObj.toLocaleDateString('fr-CA', { 
@@ -26,7 +31,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/assets");
-  eleventyConfig.addPassthroughCopy("src/js");
+  eleventyConfig.addPassthroughCopy("src/script");
   eleventyConfig.addPassthroughCopy("src/lightbox2-2.11.4");
 
   eleventyConfig.ignores.add("_site");
