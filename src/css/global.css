@@ -1,0 +1,88 @@
+body {
+    background-color: #F7F2E4 !important;
+    font-family: "Playfair Display", serif !important;
+    font-optical-sizing: auto !important;
+    font-style: normal !important;
+    font-size: 1rem !important;
+}
+
+
+html,
+body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+
+/* ----------- texte --------------  */
+.praise-font {
+    font-family: "Praise" !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+}
+
+.texte {
+    font-size: 1.1rem !important;
+}
+
+.my-magenta {
+    color: #341830 !important;
+}
+
+/* ------------- Liens -------------- */
+.links-mauve {
+    color: #341830 !important;
+    font-style: italic !important;
+}
+
+.links-white {
+    color: rgb(247, 242, 228) !important;
+    font-style: normal !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    cursor: pointer !important;
+}
+.opacity-links {
+    opacity: 1 !important;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.opacity-links:hover {
+    opacity: 0.6 !important;
+    transition: opacity 0s steps(1, start) !important;
+}
+
+
+
+/* ------------- Icons ---------- */
+i {
+    color: #341830 !important;
+}
+
+.my-chevron-123 {
+    bottom: 4% !important;
+    font-size: 2rem !important;
+}
+
+@media (max-width: 576px) {
+    .slide-in-left {
+        max-width: 6rem !important;
+    }
+
+    .gap-4 {
+        gap: 1rem !important;
+    }
+
+    .button2 {
+        font-size: 1rem;
+    }
+}
+
+.elfsight-app-5e059b5c-451b-4804-ba57-5a7f0413227a {
+    margin: 0 auto !important;
+}
+
+
+
+

@@ -1,0 +1,39 @@
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px) rotate(-10deg);
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+
+.my-chevron-animation {
+    animation: chevron 1s ease-in-out infinite alternate;
+}
+
+@keyframes chevron {
+    from {
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}

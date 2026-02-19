@@ -1,0 +1,102 @@
+
+
+
+/* button2 */
+.button2 {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.button2 {
+    --primary-color: #341830;
+    --hovered-color: #4a2344;
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.button2 p {
+    margin: 0;
+    position: relative;
+    color: #341830;
+}
+
+.button2::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: #4a2344;
+    height: 2px;
+    transition: 0.3s ease-out;
+}
+
+.button2 p::before {
+    position: absolute;
+    /*   box-sizing: border-box; */
+    width: 0%;
+    inset: 0;
+    color: #4a2344;
+    overflow: hidden;
+    transition: 0.3s ease-out;
+}
+
+.button2:hover::after {
+    width: 100%;
+}
+
+.button2:hover p::before {
+    width: 100%;
+}
+
+.button2:hover svg {
+    transform: translateX(4px);
+    color: #4a2344;
+}
+
+.button2 svg {
+    color: #341830;
+    transition: 0.2s;
+    position: relative;
+    width: 15px;
+    transition-delay: 0.2s;
+}
+
+
+
+.btn-primary {
+    background-color: #341830 !important;
+    padding: 0.8rem 1.4rem !important;
+    border-color: #341830 !important;
+    font-size: 1.3rem !important;
+    border-radius: 30px !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #4a2344 !important;
+    border-color: #4a2344 !important;
+}
+
+
+.btn-outline-primary:hover {
+    background-color: #341830 !important;
+    color: white !important;
+}
+
+.btn-outline-primary:hover i {
+    /* background-color: #341830 !important;   */
+    color: white !important;
+}
+
+.btn-outline-primary {
+    border-color: #341830 !important;
+    color: #341830 !important;
+}
