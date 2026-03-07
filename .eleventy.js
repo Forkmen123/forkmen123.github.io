@@ -2,7 +2,7 @@ const markdownIt = require("markdown-it");
 const katex = require("@iktakahiro/markdown-it-katex");
 
 module.exports = function(eleventyConfig) {
-
+// ------------ LaTeX ---------- 
   const mdLib = markdownIt({
     html: true,
     breaks: true,
@@ -11,6 +11,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.setLibrary("md", mdLib);
 
+// ------------ ajout de collections --------
   eleventyConfig.addCollection("recentPosts", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/blog/*.md").reverse().slice(0, 3);
   });
@@ -19,7 +20,7 @@ module.exports = function(eleventyConfig) {
       return collectionApi.getFilteredByGlob("src/blog/*.md").reverse();
   });
   
-
+// ----------------- ajout de filtres ---------------- 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return dateObj.toLocaleDateString('fr-CA', { 
       year: 'numeric',
@@ -28,12 +29,14 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+// --------------- Passthrough copies -------------
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/script");
   eleventyConfig.addPassthroughCopy("src/lightbox2-2.11.4");
 
+// ---------------- ignore files ----------------
   eleventyConfig.ignores.add("_site");
   eleventyConfig.ignores.add("src/_includes/_site/"); 
 
