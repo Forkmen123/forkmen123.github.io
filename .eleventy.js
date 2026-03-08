@@ -1,5 +1,6 @@
 const markdownIt = require("markdown-it");
 const katex = require("@iktakahiro/markdown-it-katex");
+const cheerio = require('cheerio');
 
 module.exports = function(eleventyConfig) {
 // ------------ LaTeX ---------- 
@@ -10,6 +11,33 @@ module.exports = function(eleventyConfig) {
   }).use(katex);
 
   eleventyConfig.setLibrary("md", mdLib);
+
+// ------------ table of contents ------------------
+
+  eleventyConfig.addFilter('getTOC', function(content) {
+    const $ = cheerio.load(content);
+    
+    let toc = '<ul class="toc-list">';
+    
+    $('h1, h2, h3').each(function() {
+      const text = $(this).text();
+      let id = $(this).attr('id');
+      
+      // Create ID if it doesn't exist
+      if (!id) {
+        id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        $(this).attr('id', id);
+      }
+      
+      const level = this.name; // h1, h2, or h3
+      toc += `<li class="${level}"><a href="#${id}">${text}</a></li>`;
+    });
+    
+    toc += '</ul>';
+    return toc;
+  });
+
+
 
 // ------------ ajout de collections --------
   eleventyConfig.addCollection("recentPosts", function(collectionApi) {

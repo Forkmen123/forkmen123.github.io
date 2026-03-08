@@ -24,6 +24,9 @@
   },
   "dependencies": {
     "@iktakahiro/markdown-it-katex": "^4.0.1",
-    "markdown-it": "^14.1.1"
+    "cheerio": "^1.2.0",
+    "markdown-it": "^14.1.1",
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-table-of-contents": "^1.1.0"
   }
 }

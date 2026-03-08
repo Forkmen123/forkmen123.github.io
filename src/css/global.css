@@ -7,31 +7,31 @@
   /* ------------------ couleurs ---------------- */
   --color-light-beige: #f7f2e4;
   --color-mauve-med: #341830;
+  --color-mauve-dark: #3f0036;
 
   --background: #f7f2e4;
   --text: var(--color-mauve-med);
+  --links: var(--color-mauve-dark);
 }
 
 body {
   background-color: var(--background);
   font-family: var(--font-serif);
-  /* overflow-x: hidden; */
-  /* max-width: 100%; */
 }
 
 /* ----------- texte --------------  */
 .d1 {
   font-family: var(--font-display);
-  color: var(--color-mauve-med);
+  color: var(--text);
   font-size: 9rem;
 }
 
 /* pour Quoi de neuf ? et le titre des articles blog */
 .d2 {
-  font-family: var(--font-serif);
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: var(--color-mauve-med);
+  font-family: var(--font-sans-serif);
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text);
 }
 
 h1,
@@ -39,14 +39,15 @@ h2,
 h3,
 h4,
 h5 {
-  color: var(--color-mauve-med);
+  font-family: var(--font-sans-serif) !important;
+  color: var(--text);
   font-weight: 600;
   margin-top: 3rem;
 }
 
 p {
-  font-family:;
   font-size: 1.25rem;
+  font-family: var(--font-serif);
 }
 
 hr {
@@ -54,18 +55,31 @@ hr {
   display: block;
   height: 2px;
   max-width: 500px;
-  /* border-top: 2px solid; */
   opacity: 0.5;
   background-image: linear-gradient(
     to right,
-    var(--color-mauve-med) 0%,
-    var(--color-mauve-med) 60%,
+    var(--text) 0%,
+    var(--text) 80%,
     transparent 100%
   );
   margin-bottom: 1.5rem;
 }
 
 a {
+  font-style: italic;
+  font-family: var(--font-serif);
+  color: var(--color-mauve-dark);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+a:hover {
+    cursor: pointer !important;
+    opacity: 0.6 !important;
+    transition: opacity 0s steps(1, start) !important;
+}
+
+i {
+  color: var(--text);
 }
 
 /*
@@ -85,20 +99,8 @@ a {
     text-decoration: none !important;
 }
 
-a:hover {
-    cursor: pointer !important;
-}
 
-.opacity-links {
-    opacity: 1 !important;
-    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
 
-.opacity-links:hover {
-    opacity: 0.6 !important;
-    transition: opacity 0s steps(1, start) !important;
-}
- */
 
 /* ------------- Icons ---------- */
 /* i {
