@@ -31,7 +31,7 @@ module.exports = function (eleventyConfig) {
   // ------------ table of contents ------------------
   eleventyConfig.addFilter("getTOC", function (content) {
     const $ = cheerio.load(content);
-    let toc = '<p>';
+    let toc = "<div>";
 
     $("h1, h2, h3").each(function () {
       const text = $(this).text();
@@ -39,11 +39,14 @@ module.exports = function (eleventyConfig) {
 
       if (id) {
         const level = this.name;
-        toc += `<p class="${level}"><a href="#${id}">${text}</a></p>`;
+        toc += ` 
+        <div>
+          <p><a class="toc-${level}" href="#${id}">${text}</a></p>
+        </div>`;
       }
     });
 
-    toc += "</p>";
+    toc += "</div>";
     return toc;
   });
 

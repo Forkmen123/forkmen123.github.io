@@ -4,25 +4,24 @@ title: Blog - Tommy Roy
 ---
 
 <div class="row text-center">
-    <div class="col-12">
+    <div class="col-12 mb-5">
         <div class="d2">Journal de Bord</div>
-        <p class="lead text-muted">Réflexions d'un individu</p>
+        <p>Réflexions d'un individu</p>
     </div>
 </div>
 
 <div class="row justify-content-center">
     <div class="col-lg-8">
-        <div class="list-group shadow-sm">
+        <div>
 
             {% for post in collections.blogPosts %}
                 <a href="{{ post.url }}" class="list-group-item list-group-item-action p-4 border-0 border-bottom">
                     <div class="d-flex w-100 justify-content-between align-items-center mb-2">
-                        <h2 class="h4 mb-0" style="color: #341830;">{{ post.data.title }}</h2>
+                        <h2 class="h4 mb-0" style="font-style: normal;">{{ post.data.title }}</h2>
                         <small class="text-muted text-nowrap ms-3">
                             {{ post.date | readableDate }}
                         </small>
                     </div>
-
                     <p class="mb-1 text-secondary">
                         {% if post.data.description %}
                             {{ post.data.description }}
@@ -34,7 +33,9 @@ title: Blog - Tommy Roy
                     <div class="mt-2">
                         {% for tag in post.data.tags %}
                             {% if tag != "posts" %}
-                                <span class="badge bg-light text-dark border">{{ tag }}</span>
+                                <span class="badge bg-secondary" 
+                                      style="background-color: var(--color-mauve-med) !important; 
+                                      opacity: 0.8;">{{ tag }}</span>
                             {% endif %}
                         {% endfor %}
                     </div>
@@ -48,6 +49,6 @@ title: Blog - Tommy Roy
         </div>
     </div>
 </div>
-<div class="row mb-5 text-center" style="min-height: 300px">
+<div class="row text-center mt-5">
     <iframe src="https://tommyroy.substack.com/embed" width="480" height="150" frameborder="0" scrolling="no"></iframe>
 </div>
