@@ -28,8 +28,8 @@ body {
 
 /* pour Quoi de neuf ? et le titre des articles blog */
 .d2 {
-  font-family: var(--font-sans-serif);
-  font-size: 3rem;
+  font-family: var(--font-display);
+  font-size: 5rem;
   font-weight: 600;
   color: var(--text);
 }
@@ -93,11 +93,7 @@ i {
     font-style: italic !important;
 }
 
-.links-white {
-    color:  var(--color-light-beige) !important;
-    font-style: normal !important;
-    text-decoration: none !important;
-}
+
 
 
 
@@ -128,11 +124,9 @@ i {
   }
 }
 
-/* --------- autre ------------- */
-
 .elfsight-app-5e059b5c-451b-4804-ba57-5a7f0413227a {
   margin: 0 auto !important;
-}
+} 
 /* ---------------------------
             gallery 
 --------------------------- */
@@ -444,10 +438,10 @@ input:checked + .slider:before {
   border-color: #341830 !important;
   color: #341830 !important;
 }
-
+/* 
 ---------------------------------
   blog
-  --------------------------------
+  -------------------------------- */
   .article-body {
   font-size: 20px;
   line-height: 1.7;
@@ -478,9 +472,10 @@ code {
   background-color: red !important;
 }
 
-------------------------- animations ------------------------- .fade-in {
+/* ------------------------- animations -------------------------  */
+.fade-in {
   opacity: 0;
-  animation: fadeIn 1.5s ease-out forwards;
+  animation: fadeIn 0.5s ease-out forwards;
 }
 
 @keyframes fadeIn {

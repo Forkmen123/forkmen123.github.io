@@ -2,54 +2,52 @@
 layout: base.njk
 ---
 
-<div class="container py-5">
-    <div class="col">
-        <aside class="toc">
-            <nav class="toc-nav">
-                <h2>On This Page</h2>
-                {{ content | getTOC | safe }}
-            </nav>
-        </aside>
+<div class="row">
+    <div class="col-3" style="overflow-y: auto; position: sticky; top: 2rem; max-height: calc(100vh); align-self: start;">
+        <div>
+            <h4>Contenu</h4>
+            {{ content | getTOC | safe }}
+        </div>
+        <div>
+            {% if (related | length) != 0 %}
+                <h4>Articles liés</h4>
+                {% for post in related %}
+                    <a href="{{ collection.url.post }}">
+                        {{ post }}
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                {% endfor %}
+            {% endif %}
+        </div>
     </div>
 
-    <div class="col">
+    <div class="col" style="max-width: 700px">
+        <div class="text-center">
+            <h1>{{ title }}</h1>
+            <p class="fst-italic"
+               style="opacity: 0.7; color: var(--color-mauve-med)">
+                {{ date | readableDate }}
+            </p>
+            {% for tag in tags %}
+                <span class="badge bg-secondary" style="background-color: var(--color-mauve-med) !important; opacity: 0.7;">{{ tag }}</span>
+            {% endfor %}
+            <hr class="my-4"
+                style="width: 50px;
+                       margin: 0 auto;
+                       background-image: linear-gradient(
+                            to right,
+                            transparent 0%,
+                            var(--color-mauve-med) 30%,
+                            var(--color-mauve-med) 70%,
+                            transparent 100%
+                        );">
+        </div>
 
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-8 text-center">
-                <h1 class="d2">{{ title }}</h1>
-                <p class="fst-italic" style="opacity: 0.7; color: var(--color-mauve-med)">{{ date | readableDate }}</p>
-                {% for tag in tags %}
-                    <span class="badge bg-secondary" style="background-color: var(--color-mauve-med) !important; opacity: 0.7;">{{ tag }}</span>
-                {% endfor %}
-                <hr class="my-4" style="width: 50px; margin: 0 auto; background-image: linear-gradient(
-                    to right,
-                    transparent 0%,
-                    var(--color-mauve-med) 30%,
-                    var(--color-mauve-med) 70%,
-                    transparent 100%
-                );">
-            </div>
+        <div class="justify-content-center mt-5">
+            {{ content | safe }}
         </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-7 article-content fs-5 lh-lg">
-                {{ content | safe }}
-            </div>
-        </div>
-        <div class="row justify-content-center mt-5 pt-5 border-top">
-            <div class="col-lg-8">
-                <div class="list-group">
-                    <h4>En lien avec cela... </h3>
-                    {% for post in related %}
-                        <a href="{{ collection.url.post }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                            <div>
-                                <small class="text-muted"></small><br>
-                                <strong>{{ post }}</strong>
-                            </div>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    {% endfor %}
-                </div>
-            </div>
+
+        <div class="justify-content-center text-center" style="margin-top: 6rem">
             <iframe src="https://tommyroy.substack.com/embed" width="480" height="150" frameborder="0" scrolling="no"></iframe>
         </div>
     </div>
